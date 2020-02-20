@@ -1,10 +1,10 @@
-## Development App 
-# Required
+# Development App 
+## Required
 - NodeJS/NPM
 - Visual studio Code
 - Expo App (on phone)
 
-# Instructions
+## Instructions
 - Run visual studio code
 - Open Command line (ctrl + shift + P)
 - Fill in: Git:Clone
