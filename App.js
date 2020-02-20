@@ -35,6 +35,10 @@ const styles = StyleSheet.create({
     padding: 10,
     marginTop: 40,
     margin: 30,
+    shadowColor: 'rgba(0,0,0, .4)',
+    shadowOffset: { height: 3, width: 3 },
+    shadowOpacity: 1,
+    shadowRadius: 1,
     backgroundColor: '#a8a8a8',
   },
 });
