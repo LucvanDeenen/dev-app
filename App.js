@@ -17,7 +17,7 @@ export default function App() {
   }
 
   return (
-    <View>
+    <View style={styles.app}>
       <View style={styles.container}>
         <Menu />
       </View>
@@ -26,10 +26,15 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  app: {
+    backgroundColor: '#c9c7c7'
+  },
   container: {
+    borderRadius: 10,
     height: '90%',
+    padding: 10,
     marginTop: 40,
     margin: 30,
-    backgroundColor: '#fff',
+    backgroundColor: '#a8a8a8',
   },
 });
