@@ -42,7 +42,6 @@ const Menu = props => {
 
 const styles = StyleSheet.create({
     opacityButton: {
-        backgroundColor: '#517fa4',
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
