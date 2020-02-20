@@ -49,6 +49,8 @@ const styles = StyleSheet.create({
         padding: 5
     },
     menuTab: {
+        borderRadius: 10,
+        borderWidth: 1,
         justifyContent: 'center',
         flex: 1,
     }
