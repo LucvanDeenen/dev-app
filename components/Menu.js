@@ -15,7 +15,7 @@ const Menu = props => {
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.menuButton}>
                     <Icon reverse
-                        name='ios-american-football'
+                        name='ios-calculator'
                         type='ionicon'
                         color='#f50'/>
                 </TouchableOpacity>
