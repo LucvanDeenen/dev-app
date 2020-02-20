@@ -1,19 +1,40 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions } from 'react-native';
-import { Header } from 'react-native-elements';
+import { StyleSheet, View, TouchableOpacity } from 'react-native';
+import { Icon } from 'react-native-elements';
 
-// const widthScreen = Dimensions.get("window").width;
 
 const Menu = props => {
     return (
         <View style={styles.menuTab}>
-            <Header
-                leftComponent={{ icon: 'menu', color: '#fff' }}
-                centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
-                rightComponent={{ icon: 'home', color: '#fff' }}
-            />
             <TouchableOpacity style={styles.opacityButton}>
-                <Text>Wo3w</Text>
+                <Icon name='rowing' />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.opacityButton}>
+                <Icon
+                    reverse
+                    name='ios-american-football'
+                    type='ionicon'
+                    color='#517fa4'
+                />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.opacityButton}>
+                <Icon
+                    name='g-translate'
+                    color='#00aced' />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.opacityButton}>
+                <Icon
+                    name='heartbeat'
+                    type='font-awesome'
+                    color='#f50'/>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.opacityButton}>
+                <Icon
+                    name='youtube'
+                    type='feather'
+                    color='#f50'
+                    size='50'
+                />
             </TouchableOpacity>
         </View>
     );
@@ -21,13 +42,14 @@ const Menu = props => {
 
 const styles = StyleSheet.create({
     opacityButton: {
-        borderStyle: "solid",
-        borderWidth: 1,
+        backgroundColor: '#517fa4',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
         padding: 5
     },
     menuTab: {
-        borderStyle: "solid",
-        borderWidth: 1,
+        justifyContent: 'center',
         flex: 1,
     }
 });
