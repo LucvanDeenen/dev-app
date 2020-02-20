@@ -4,7 +4,7 @@ import Menu from './components/Menu.js';
 
 export default function App() {
   const [textIn, setTextIn] = useState('');
-  
+
   // //nieuwe manier voor uitvoeren function
   const textHandler = (t) => {
     setTextIn(t);
@@ -17,8 +17,10 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Menu/>
+    <View>
+      <View style={styles.container}>
+        <Menu />
+      </View>
     </View>
   );
 }
@@ -26,6 +28,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     height: '90%',
+    marginTop: 40,
     margin: 30,
     backgroundColor: '#fff',
   },
