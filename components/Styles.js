@@ -1,11 +1,14 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-    // Footer menu
+    // Footer app
     appFooter: {
+        backgroundColor: '#52AA8A',
+        maxHeight: '12%',
+        marginTop: '15%',
+        borderTopEndRadius: 40,
+        borderTopStartRadius: 40,
         flex: 1,
-        borderStyle: 'dashed',
-        borderWidth: 1,
     },
 
     // Globals

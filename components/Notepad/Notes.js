@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 
 import CustomHeader from './Header.js';
-import CustomContent from './Content';
+import CustomContent from './Content.js';
 
 import styles from '../Styles.js';
 
