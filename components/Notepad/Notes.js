@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
+
 import CustomHeader from './Header.js';
 import CustomContent from './Content';
+
+import styles from '../Styles.js';
 
 export default class Notes extends Component {
     render() {
@@ -13,10 +16,3 @@ export default class Notes extends Component {
         )
     }
 }
-
-const styles = StyleSheet.create({
-    mainScreen: {
-        justifyContent: 'flex-start',
-        flex: 1,
-    },
-})

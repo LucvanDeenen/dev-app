@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
+
+import styles from './Styles.js';
 
 export default class Notes extends Component { 
     render() {
         return(
-            <View>
+            <View style={styles.appFooter}>
 
             </View>
         );
     }
 }
 
-const styles = StyleSheet.create({
-
-});

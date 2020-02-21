@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 export default class Content extends Component { 
     render() {
@@ -12,10 +12,3 @@ export default class Content extends Component {
         ); 
     }
 }
-
-const styles = StyleSheet.create({
-    contentText: {
-        marginTop: 10,
-        marginLeft: 10,
-    } 
-})
