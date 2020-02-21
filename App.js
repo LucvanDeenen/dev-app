@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Alert, Text, Dimensions } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Menu from './components/Menu.js';
 import Notes from './components/Notepad/Notes.js';
 
