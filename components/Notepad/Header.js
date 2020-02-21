@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
 
 export default class Header extends Component {
@@ -11,16 +11,18 @@ export default class Header extends Component {
                         <Icon reverse
                             name="ios-home"
                             type='ionicon'
-                            color='#eb9144'
-                            size='20' />
+                            color='#c97630' />
                     </TouchableOpacity>
+                </View>
+                <View>
+                    <Text style={styles.textV}>Notities</Text>
                 </View>
                 <View style={styles.rightHead}>
                     <TouchableOpacity>
-                        <Icon name="ios-add"
+                        <Icon reverse
+                            name="ios-add"
                             type='ionicon'
-                            color='#fff'
-                            size='40' />
+                            color='#c97630' />
                     </TouchableOpacity>
                 </View>
             </View>
@@ -29,6 +31,9 @@ export default class Header extends Component {
 }
 
 const styles = StyleSheet.create({
+    textV: {
+        color: '#fff',
+    },
     head: {
         backgroundColor: '#d97f32',
         flexDirection: 'row',
@@ -38,16 +43,16 @@ const styles = StyleSheet.create({
         shadowOffset: { height: 1, width: 1 },
         shadowOpacity: 1,
         shadowRadius: 1,
-        height: '10%'
+        height: '11%'
     },
     leftHead: {
         alignItems: 'flex-start',
-        padding: 5,
+        marginLeft: 2,
         flex: 1,
     },
     rightHead: {
         alignItems: 'flex-end',
-        marginRight: 15,
+        marginRight: 2,
         flex: 1,
     },
 })
