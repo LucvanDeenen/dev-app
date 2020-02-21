@@ -6,13 +6,12 @@ import CustomContent from './Content.js';
 
 import styles from '../Styles.js';
 
-export default class Notes extends Component {
-    render() {
-        return (
-            <View style={styles.mainScreen}>
-                <CustomHeader />
-                <CustomContent />
-            </View>
-        )
-    }
+const Notes = props => {
+    return (
+        <View style={styles.mainScreen}>
+            <CustomHeader />
+            <CustomContent />
+        </View>
+    )
 }
+export default Notes;

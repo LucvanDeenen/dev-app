@@ -1,32 +1,11 @@
-import React, { Component } from 'react';
-import { View, TouchableOpacity, Alert, Text } from 'react-native';
+import React, { useState } from 'react';
+import { View, TouchableOpacity, Alert, Text, Modal } from 'react-native';
 import { Icon } from 'react-native-elements';
 
 import styles from '../Styles.js'
 
-export default class Menu extends Component {
-    buttonTest() {
-        Alert.alert(
-            'Testing testing',
-            'Will the real slim shady please stand up!',
-            [{
-                text: 'Ask me later', onPress: () => console.log('Ask me later pressed')
-            },
-            {
-                text: 'Cancel',
-                onPress: () => console.log('Cancel Pressed'),
-                style: 'cancel',
-            },
-            {
-                text: 'OK', onPress: () => console.log('OK Pressed')
-            }],
-            {
-                cancelable: false
-            }
-        );
-    }
-
-    render() {
+const Menu = props => {
+    if (props.control) {
         return (
             <View style={styles.container}>
                 <View style={styles.menuTab}>
@@ -64,7 +43,7 @@ export default class Menu extends Component {
                             <Text style={styles.textStandard}> Notes </Text>
                         </View>
                         <View style={styles.menuBlock}>
-                            <TouchableOpacity style={styles.menuButton} onPress={this.buttonTest}>
+                            <TouchableOpacity style={styles.menuButton}>
                                 <Icon reverse
                                     name='ios-camera'
                                     type='ionicon'
@@ -90,6 +69,12 @@ export default class Menu extends Component {
                 <Text style={styles.textStandard}> 1/1 </Text>
             </View>
         );
+    } 
+    else {
+        return (null);
     }
+
 }
+
+export default Menu
 

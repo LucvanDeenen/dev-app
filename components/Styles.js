@@ -3,11 +3,11 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     // Footer app
     appFooter: {
-        backgroundColor: '#52AA8A',
-        maxHeight: '12%',
-        marginTop: '15%',
-        borderTopEndRadius: 40,
-        borderTopStartRadius: 40,
+        flexDirection: 'row',
+        borderRadius: 40,
+    },
+    containerFooter: {
+        justifyContent: 'flex-end',
         flex: 1,
     },
 
@@ -18,7 +18,7 @@ export default StyleSheet.create({
     },
     textStandard: {
         color: '#fff',
-        textAlign: 'center',
+        textAlign:'center',
         fontFamily: 'Arial Rounded MT Bold',
     },
 
@@ -69,7 +69,7 @@ export default StyleSheet.create({
         marginTop: 10,
         marginVertical: 10
     },
-    
+
     // Notes Header
     head: {
         backgroundColor: '#d97f32',
@@ -97,10 +97,10 @@ export default StyleSheet.create({
         marginRight: 2,
         flex: 1,
     },
-    
+
     // Notes Content
     mainScreen: {
         justifyContent: 'flex-start',
         flex: 1,
-    }, 
+    },
 });
