@@ -23,13 +23,14 @@ const Menu = props => {
             <View style={styles.menuRow}>
                 <TouchableOpacity style={styles.menuButton}>
                     <Icon reverse
-                        name='g-translate'
+                        name='ios-create'
+                        type='ionicon'
                         color='#f50'/>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.menuButton}>
                     <Icon reverse
-                        name='heartbeat'
-                        type='font-awesome'
+                        name='ios-camera'
+                        type='ionicon'
                         color='#f50' />
                 </TouchableOpacity>
             </View>
