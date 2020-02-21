@@ -1,55 +1,78 @@
-import React, { useState } from 'react';
-import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
+import React, { Component } from 'react';
+import { Text, StyleSheet, View, TouchableOpacity, Alert, AlertIOS } from 'react-native';
 import { Icon } from 'react-native-elements';
 
 
-const Menu = props => {
-    return (
-        <View style={styles.menuTab}>
-            <View style={styles.menuRow}>
-                <TouchableOpacity style={styles.menuButton}>
-                    <Icon reverse
-                        name="ios-home" 
-                        type='ionicon'
-                        color='#f50'/>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.menuButton}>
-                    <Icon reverse
-                        name='ios-calculator'
-                        type='ionicon'
-                        color='#f50'/>
-                </TouchableOpacity>
-            </View>
-            <View style={styles.menuRow}>
-                <TouchableOpacity style={styles.menuButton}>
-                    <Icon reverse
-                        name='ios-create'
-                        type='ionicon'
-                        color='#f50'/>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.menuButton}>
-                    <Icon reverse
-                        name='ios-camera'
-                        type='ionicon'
-                        color='#f50' />
-                </TouchableOpacity>
-            </View>
-            <View style={styles.menuRow}>
-                <TouchableOpacity style={styles.menuButton}>
-                    <Icon reverse
-                        name='youtube'
-                        type='feather'
-                        color='#f50'/>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.menuButton}>
+export default class Menu extends Component {
+    buttonTest() {
+        Alert.alert (
+            'Testing testing',
+            'Will the real slim shady please stand up!',
+            [{
+                text: 'Ask me later', onPress: () => console.log('Ask me later pressed')
+            },
+            {
+                text: 'Cancel',
+                onPress: () => console.log('Cancel Pressed'),
+                style: 'cancel',
+            },
+            {
+                text: 'OK', onPress: () => console.log('OK Pressed')
+            }],
+            {
+                cancelable: false
+            }
+        );
+    }
+
+    render() {
+        return (
+            <View style={styles.menuTab}>
+                <View style={styles.menuRow}>
+                    <TouchableOpacity value='home' style={styles.menuButton} >
+                        <Icon reverse
+                            name="ios-home"
+                            type='ionicon'
+                            color='#f50' />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.menuButton}>
+                        <Icon reverse
+                            name='ios-calculator'
+                            type='ionicon'
+                            color='#f50' />
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.menuRow}>
+                    <TouchableOpacity style={styles.menuButton}>
+                        <Icon reverse
+                            name='ios-create'
+                            type='ionicon'
+                            color='#f50' />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.menuButton} onPress={this.buttonTest}>
+                        <Icon reverse
+                            name='ios-camera'
+                            type='ionicon'
+                            color='#f50' />
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.menuRow}>
+                    <TouchableOpacity style={styles.menuButton}>
+                        <Icon reverse
+                            name='youtube'
+                            type='feather'
+                            color='#f50' />
+                    </TouchableOpacity>
+                    {/* <TouchableOpacity style={styles.menuButton}>
                     <Icon name='arrow-right'
                         type='evilicon'
                         color='#ffffff'
                         size='60'/>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
+                </View>
             </View>
-        </View>
-    );
+        );
+    }
 }
 
 const styles = StyleSheet.create({
@@ -80,4 +103,3 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Menu;

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
-import { Icon } from 'react-native-elements';
 import { Header } from 'react-native/Libraries/NewAppScreen';
 
 const Home = props => {
@@ -8,7 +7,7 @@ const Home = props => {
         <View style={styles.homeRow}>
             <Header
                 placement="left"
-                leftComponent={{ icon: 'menu', color: '#fff' }}
+                leftComponent={{ icon: 'Menu', color: '#fff' }}
                 centerComponent={{ text: 'Home', style: { color: '#fff' } }}
             />
             <Text>Wow</Text>

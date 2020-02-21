@@ -1,19 +1,14 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Alert, Text, Dimensions } from 'react-native';
 import Menu from './components/Menu.js';
+import Home from './components/Home.js';
 
 export default function App() {
-  const [textIn, setTextIn] = useState('');
+  const [nav, setNav] = useState('');
 
-  // //nieuwe manier voor uitvoeren function
-  const textHandler = (t) => {
-    setTextIn(t);
-  }
-
-  // //uitvoeren old school function
-  function clicker() {
-    Alert.alert('button pressed', 'great job!', Button);
-    Alert.alert('next', textIn, Button);
+  //nieuwe manier voor uitvoeren function
+  const navHandler = (t) => {
+    setNav(t);
   }
 
   return (
