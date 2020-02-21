@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import CustomHeader from './Header.js';
+import CustomNotes from './Notes.js';
 
 export default class Notes extends Component {
     render() {
         return (
             <View style={styles.mainScreen}>
                 <CustomHeader style={styles.header} />
-                <View style={styles.content}>
-
-                </View>
+                <CustomNotes />
             </View>
         )
     }
