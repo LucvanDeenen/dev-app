@@ -7,7 +7,7 @@ export default class Notes extends Component {
     render() {
         return (
             <View style={styles.mainScreen}>
-                <CustomHeader style={styles.header} />
+                <CustomHeader />
                 <CustomContent />
             </View>
         )
