@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, View, TouchableOpacity, Alert, AlertIOS } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Alert } from 'react-native';
 import { Icon } from 'react-native-elements';
 
 
@@ -102,4 +102,3 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     }
 });
-

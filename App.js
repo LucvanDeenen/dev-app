@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Alert, Text, Dimensions } from 'react-native';
 import Menu from './components/Menu.js';
-import Home from './components/Home.js';
+import Notes from './components/Notepad/Notes.js';
 
 export default function App() {
   const [nav, setNav] = useState('');
@@ -14,7 +14,8 @@ export default function App() {
   return (
     <View style={styles.app}>
       <View style={styles.container}>
-        <Menu />
+        {/* <Menu /> */}
+        <Notes />
       </View>
     </View>
   );
@@ -22,7 +23,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   app: {
-    backgroundColor: '#c9c7c7'
+    backgroundColor: '#fff'
   },
   container: {
     borderRadius: 10,
