@@ -14,9 +14,11 @@ const Header = props => {
             </View>
             <View style={styles.rightHead}>
                 <TouchableOpacity>
-                    <Icon name="ios-add"
+                    <Icon reverse
+                        name="ios-add"
                         type='ionicon'
-                        color='#52AA5E' />
+                        color='#52AA5E'
+                        size='28' />
                 </TouchableOpacity>
             </View>
         </View>

@@ -1,12 +1,20 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+    //Home
+    contentHome: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
     // Footer app
     appFooter: {
         flexDirection: 'row',
         borderRadius: 40,
     },
     containerFooter: {
+        zIndex: 2,
         justifyContent: 'flex-end',
         flex: 1,
     },
@@ -14,11 +22,15 @@ export default StyleSheet.create({
     // Globals
     app: {
         backgroundColor: '#ffff',
+        justifyContent: 'center',
+        height: '100%',
         flex: 1,
+        zIndex: 1,
     },
     textStandard: {
         color: '#fff',
         textAlign:'center',
+        fontSize: 16,
         fontFamily: 'Arial Rounded MT Bold',
     },
 
@@ -27,13 +39,21 @@ export default StyleSheet.create({
         borderRadius: 100,
         height: '75%',
         padding: 5,
-        marginTop: 30,
+        marginTop: '20%',
         marginHorizontal: 40,
         shadowColor: 'rgba(0,0,0, .4)',
         shadowOffset: { height: 3, width: 3 },
         shadowOpacity: 1,
         shadowRadius: 1,
         backgroundColor: '#52AA8A',
+    },
+    background: {
+        flex: 1,
+        height: '100%',
+        width: '100%',
+        zIndex: 2,
+        position: 'absolute',
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
     },
     menuTab: {
         justifyContent: 'center',
@@ -64,13 +84,16 @@ export default StyleSheet.create({
         backgroundColor: '#388659'
     },
 
-    // Home
-    contentText: {
-        marginTop: 10,
-        marginVertical: 10
+    // Notes
+    mainScreen: {
+        justifyContent: 'flex-start',
+        flex: 1,
     },
-
-    // Notes Header
+    contentText: {
+        flex: 1,
+        marginTop: 10,
+        marginHorizontal: 10,
+    }, 
     head: {
         backgroundColor: '#52AA8A',
         paddingTop: 15,
@@ -101,12 +124,6 @@ export default StyleSheet.create({
         height: '100%',
         alignItems: 'flex-end',
         marginRight: 2,
-        flex: 1,
-    },
-
-    // Notes Content
-    mainScreen: {
-        justifyContent: 'flex-start',
         flex: 1,
     },
 });

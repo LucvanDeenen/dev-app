@@ -2,25 +2,17 @@ import React, { useState } from 'react';
 import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
 import { Header } from 'react-native/Libraries/NewAppScreen';
 
+import styles from '../Styles.js';
+
 const Home = props => {
-    return (
-        <View style={styles.homeRow}>
-            <Header
-                placement="left"
-                leftComponent={{ icon: 'Menu', color: '#fff' }}
-                centerComponent={{ text: 'Home', style: { color: '#fff' } }}
-            />
-            <Text>Wow</Text>
-        </View>
-    );
+    if (props.control == 'home') {
+        return (
+            <View style={styles.contentHome}>
+                <Text>Wow</Text>
+            </View>
+        );
+    } else {
+        return null;
+    }    
 }
-
-const styles = StyleSheet.create({
-    homeRow: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    }
-});
-
 export default Home;
