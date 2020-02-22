@@ -7,11 +7,15 @@ import CustomContent from './Content.js';
 import styles from '../Styles.js';
 
 const Notes = props => {
-    return (
-        <View style={styles.mainScreen}>
-            <CustomHeader />
-            <CustomContent />
-        </View>
-    )
+    if (props.control == 'notes') {
+        return (
+            <View style={styles.mainScreen}>
+                <CustomHeader />
+                <CustomContent />
+            </View>
+        );
+    } else {
+        return null;
+    }
 }
 export default Notes;
