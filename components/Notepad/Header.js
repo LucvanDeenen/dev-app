@@ -8,22 +8,15 @@ const Header = props => {
     return (
         <View style={styles.head}>
             <View style={styles.leftHead}>
-                <TouchableOpacity>
-                    <Icon reverse
-                        name="ios-home"
-                        type='ionicon'
-                        color='#c97630' />
-                </TouchableOpacity>
             </View>
             <View style={styles.middleHead}>
                 <Text style={styles.textStandard}>Notities</Text>
             </View>
             <View style={styles.rightHead}>
                 <TouchableOpacity>
-                    <Icon reverse
-                        name="ios-add"
+                    <Icon name="ios-add"
                         type='ionicon'
-                        color='#c97630' />
+                        color='#52AA5E' />
                 </TouchableOpacity>
             </View>
         </View>

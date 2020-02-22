@@ -26,7 +26,7 @@ export default function App() {
     <View style={styles.app}>
       <Menu control={toggle} select={choseScreen}/>
       <Notes control={screen}/>
-      <Footer switch={toggleFunc} control={toggle}/>
+      <Footer switch={toggleFunc} control={toggle} select={screen}/>
     </View>
   );
 }

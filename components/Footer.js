@@ -5,7 +5,7 @@ import { Icon } from 'react-native-elements';
 import styles from './Styles.js';
 
 const Notes = props => {
-    if(!props.control) {
+    if (!props.control) {
         return (
             <View style={styles.containerFooter}>
                 <View style={styles.appFooter}>
