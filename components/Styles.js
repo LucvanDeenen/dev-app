@@ -7,6 +7,10 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    backgroundImage: {
+        flex: 1,
+        resizeMode: 'cover',
+    },
 
     // Footer app
     appFooter: {
@@ -29,7 +33,7 @@ export default StyleSheet.create({
     },
     textStandard: {
         color: '#fff',
-        textAlign:'center',
+        textAlign: 'center',
         fontSize: 16,
         fontFamily: 'Arial Rounded MT Bold',
     },
@@ -93,7 +97,7 @@ export default StyleSheet.create({
         flex: 1,
         marginTop: 10,
         marginHorizontal: 10,
-    }, 
+    },
     head: {
         backgroundColor: '#52AA8A',
         paddingTop: 15,
