@@ -2,7 +2,8 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { Card } from 'react-native-elements';
 
-import styles from '../Styles.js';
+import styles from './local-styles.js';
+import globalStyles from '../Main/styles.js';
 
 const Content = props => {
     return (

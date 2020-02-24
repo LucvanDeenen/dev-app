@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { View, TouchableOpacity, Alert, Text, Modal } from 'react-native';
 import { Icon } from 'react-native-elements';
 
-import styles from '../Styles.js'
+import styles from './local-styles.js';
+import globalStyles from '../Main/styles.js';
 
 const Menu = props => {
     if (props.control) {
@@ -20,17 +21,18 @@ const Menu = props => {
                                         color='#52AA5E'
                                         raised />
                                 </TouchableOpacity>
-                                <Text style={styles.textStandard}> Home </Text>
+                                <Text style={globalStyles.textStandard}> Home </Text>
                             </View>
                             <View style={styles.menuBlock}>
                                 <TouchableOpacity style={styles.menuButton}>
                                     <Icon reverse
-                                        name='ios-calculator'
+                                        onPress={() => { props.select('accounts') }}
+                                        name='ios-key'
                                         type='ionicon'
                                         color='#52AA5E'
                                         raised />
                                 </TouchableOpacity>
-                                <Text style={styles.textStandard}> Calculator </Text>
+                                <Text style={globalStyles.textStandard}> Account </Text>
                             </View>
                         </View>
                         <View style={styles.menuRow}>
@@ -43,20 +45,8 @@ const Menu = props => {
                                         color='#52AA5E'
                                         raised />
                                 </TouchableOpacity>
-                                <Text style={styles.textStandard}> Notes </Text>
+                                <Text style={globalStyles.textStandard}> Notes </Text>
                             </View>
-                            <View style={styles.menuBlock}>
-                                <TouchableOpacity style={styles.menuButton}>
-                                    <Icon reverse
-                                        name='ios-camera'
-                                        type='ionicon'
-                                        color='#52AA5E'
-                                        raised />
-                                </TouchableOpacity>
-                                <Text style={styles.textStandard}> Camera </Text>
-                            </View>
-                        </View>
-                        <View style={styles.menuRow}>
                             <View style={styles.menuBlock}>
                                 <TouchableOpacity style={styles.menuButton}>
                                     <Icon reverse
@@ -66,11 +56,23 @@ const Menu = props => {
                                         color='#52AA5E'
                                         raised />
                                 </TouchableOpacity>
-                                <Text style={styles.textStandard}> Videos </Text>
+                                <Text style={globalStyles.textStandard}> Videos </Text>
                             </View>
                         </View>
+                        <View style={styles.menuRow}>
+                            {/* <View style={styles.menuBlock}>
+                                <TouchableOpacity style={styles.menuButton}>
+                                    <Icon reverse
+                                        name='ios-camera'
+                                        type='ionicon'
+                                        color='#52AA5E'
+                                        raised />
+                                </TouchableOpacity>
+                                <Text style={globalStyles.textStandard}> Camera </Text>
+                            </View> */}
+                        </View>
                     </View>
-                    <Text style={styles.textStandard}> 1/1 </Text>
+                    <Text style={globalStyles.textStandard}> 1/1 </Text>
                 </View>
             </View>
         );

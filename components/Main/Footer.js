@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
 import { Icon } from 'react-native-elements';
 
-import styles from './Styles.js';
+import styles from './styles.js';
 
 const Notes = props => {
     if (!props.control) {

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
 
-import styles from '../Styles.js';
+import styles from './local-styles.js';
+import globalStyles from '../Main/styles.js';
 
 const Header = props => {
     return (
@@ -10,15 +11,14 @@ const Header = props => {
             <View style={styles.leftHead}>
             </View>
             <View style={styles.middleHead}>
-                <Text style={styles.textStandard}>Notities</Text>
+                <Text style={globalStyles.textStandard}>Notities</Text>
             </View>
             <View style={styles.rightHead}>
                 <TouchableOpacity>
                     <Icon reverse
                         name="ios-add"
                         type='ionicon'
-                        color='#52AA8A'
-                        size='28' />
+                        color='#52AA8A' />
                 </TouchableOpacity>
             </View>
         </View>

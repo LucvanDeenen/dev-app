@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View } from 'react-native';
 
 import CustomHeader from './Header.js';
 import CustomContent from './Content.js';
 
-import styles from '../Styles.js';
+import styles from './local-styles.js';
+import globalStyles from '../Main/styles.js';
 
 const Notes = props => {
     if (props.control == 'notes') {
