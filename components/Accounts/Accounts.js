@@ -7,11 +7,11 @@ import globalStyles from '../Main/styles.js';
 
 import AccountCard from './AccountCard.js';
 
-const [accountCard, setAccountCard] = useState([]);
+// const [accountCard, setAccountCard] = useState([]);
 
 const addAccount = val => {
     console.log(val);
-    setAccountCard([...accountCard, val]);
+    // setAccountCard([...accountCard, val]);
 }
 
 const accounts = props => {
@@ -21,7 +21,6 @@ const accounts = props => {
                 <View style={styles.accountHeader}>
                     <View style={styles.head}>
                         <View style={styles.leftHead}>
-
                         </View>
                         <View style={styles.middleHead}>
                             <Text style={globalStyles.textStandard}>Accounts</Text>
