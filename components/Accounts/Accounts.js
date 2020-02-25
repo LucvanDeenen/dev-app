@@ -32,7 +32,7 @@ const accounts = props => {
                                     name="ios-add"
                                     type='ionicon'
                                     color='#52AA8A'
-                                    onPress = {addAccount} />
+                                    onPress = {() => {addAccount(<AccountCard/>)}} />
                             </TouchableOpacity>
                         </View>
                     </View>
