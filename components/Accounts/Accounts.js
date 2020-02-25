@@ -31,21 +31,21 @@ const accounts = props => {
                                     name="ios-add"
                                     type='ionicon'
                                     color='#52AA8A'
-                                    onPress = {() => {addAccount(<AccountCard/>)}} />
+                                    onPress={() => { addAccount(<AccountCard />) }} />
                             </TouchableOpacity>
                         </View>
                     </View>
                 </View>
                 <View style={styles.accountContent}>
-                <SectionList
-          sections={[
-            {title: 'D', data: ['Devin', 'Dan', 'Dominic']},
-            {title: 'J', data: ['Jackson', 'James', 'Jillian', 'Jimmy', 'Joel', 'John', 'Julie']},
-          ]}
-          renderItem={({item}) => <Text style={styles.item}>{item}</Text>}
-          renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
-          keyExtractor={(item, index) => index}
-        />
+                    <SectionList
+                        sections={[
+                            { title: 'D', data: ['Devin', 'Dan', 'Dominic'] },
+                            { title: 'J', data: ['Jackson', 'James', 'Jillian', 'Jimmy', 'Joel', 'John', 'Julie'] },
+                        ]}
+                        renderItem={({ item }) => <Text style={styles.item}>{item}</Text>}
+                        renderSectionHeader={({ section }) => <Text style={styles.sectionHeader}>{section.title}</Text>}
+                        keyExtractor={(item, index) => index}
+                    />
                 </View>
             </View>
         );

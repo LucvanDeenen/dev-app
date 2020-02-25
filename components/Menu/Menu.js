@@ -32,11 +32,11 @@ const Menu = props => {
                                         color='#52AA5E'
                                         raised />
                                 </TouchableOpacity>
-                                <Text style={globalStyles.textStandard}> Account </Text>
+                                <Text style={globalStyles.textStandard}> Accounts </Text>
                             </View>
                         </View>
                         <View style={styles.menuRow}>
-                            <View style={styles.menuBlock}>
+                            {/* <View style={styles.menuBlock}>
                                 <TouchableOpacity value='notes' style={styles.menuButton}>
                                     <Icon reverse
                                         onPress={() => { props.select('notes') }}
@@ -57,7 +57,7 @@ const Menu = props => {
                                         raised />
                                 </TouchableOpacity>
                                 <Text style={globalStyles.textStandard}> Videos </Text>
-                            </View>
+                            </View> */}
                         </View>
                         <View style={styles.menuRow}>
                             {/* <View style={styles.menuBlock}>

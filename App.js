@@ -25,14 +25,16 @@ export default function App() {
 
   return (
     <View style={styles.app}>
-      <Menu control={menu} select={chooseScreen}/>
+      <Menu control={menu} select={chooseScreen} />
 
-      <Notes control={screen}/>
-      <Home control={screen}/>
-      <Accounts control={screen}/>
-      <Videos control={screen}/>
+      <View style={styles.containerApp}>
+        <Notes control={screen} />
+        <Home control={screen} />
+        <Accounts control={screen} />
+        <Videos control={screen} />
+      </View>
 
-      <Footer switch={toggleMenu} control={menu} select={screen}/>
+      <Footer switch={toggleMenu} control={menu} select={screen} />
     </View>
   );
 }

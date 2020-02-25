@@ -16,7 +16,7 @@ export default StyleSheet.create({
         paddingTop: 15,
         flexDirection: 'row',
         flex: 1,
-        maxHeight: '25%',
+        maxHeight: '13%',
         alignItems: 'flex-end',
         borderBottomEndRadius: 2,
         borderBottomStartRadius: 2,

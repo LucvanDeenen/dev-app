@@ -8,7 +8,7 @@ export default StyleSheet.create({
     headerHome: {
         borderBottomEndRadius: 5,
         borderBottomStartRadius: 5,
-        height: '7%',
+        height: '4%',
         shadowColor: 'rgba(0,0,0, 0.2)',
         shadowOffset: { height: 3, width: 3 },
         shadowOpacity: 1,
@@ -18,7 +18,7 @@ export default StyleSheet.create({
     contentHome: {
         flex: 1,
         margin: 10,
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         alignContent: 'center',
     },
 });

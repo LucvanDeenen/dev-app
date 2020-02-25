@@ -30,15 +30,20 @@ export default StyleSheet.create({
         fontSize: 16,
         fontFamily: 'Arial Rounded MT Bold',
     },
+    containerApp: {
+        flex: 1,
+    },
     
     // Footer app
     appFooter: {
-        flexDirection: 'row',
         borderRadius: 40,
+        marginBottom: '1%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
     },
     containerFooter: {
         zIndex: 2,
-        justifyContent: 'flex-end',
-        flex: 1,
+        backgroundColor: '#94C9A9',
     },
 });
