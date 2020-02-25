@@ -6,18 +6,13 @@ import styles from './local-styles.js';
 import globalStyles from '../Main/styles.js';
 
 import AccountCard from './AccountCard.js';
-
-// const [accountCard, setAccountCard] = useState([]);
-
-const addAccount = val => {
-    console.log(val);
-    // setAccountCard([...accountCard, val]);
-}
+import AccountAdd from './AccountAdd.js';
 
 const accounts = props => {
     if (props.control == 'accounts') {
         return (
             <View style={styles.accountContainer}>
+                <AccountAdd control={props.addAccControl}/>
                 <View style={styles.accountHeader}>
                     <View style={styles.head}>
                         <View style={styles.leftHead}>
@@ -31,7 +26,7 @@ const accounts = props => {
                                     name="ios-add"
                                     type='ionicon'
                                     color='#52AA8A'
-                                    onPress={() => { addAccount(<AccountCard />) }} />
+                                    onPress={props.addAccountFunc} />
                             </TouchableOpacity>
                         </View>
                     </View>

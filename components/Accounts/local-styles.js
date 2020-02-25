@@ -65,4 +65,27 @@ export default StyleSheet.create({
     accountCard: {
         flex: 1,
     },
+
+    // Adding an account
+    background: {
+        flex: 1,
+        height: '100%',
+        width: '100%',
+        zIndex: 2,
+        position: 'absolute',
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    },
+    container: {
+        borderBottomRightRadius: 130,
+        borderTopRightRadius: 72,
+        height: '75%',
+        padding: 10,
+        marginTop: '20%',
+        marginRight: '30%',
+        shadowColor: 'rgba(0,0,0, .4)',
+        shadowOffset: { height: 3, width: 3 },
+        shadowOpacity: 1,
+        shadowRadius: 1,
+        backgroundColor: '#52AA8A',
+    },
 });
