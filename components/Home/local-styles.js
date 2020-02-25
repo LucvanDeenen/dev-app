@@ -16,6 +16,9 @@ export default StyleSheet.create({
         backgroundColor: '#52AA8A',
     },
     contentHome: {
+        flex: 1,
         margin: 10,
+        justifyContent: 'flex-end',
+        alignContent: 'center',
     },
 });

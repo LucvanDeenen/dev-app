@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, SectionList } from 'react-native';
 import { Icon } from 'react-native-elements';
 
 import styles from './local-styles.js';
@@ -37,7 +37,15 @@ const accounts = props => {
                     </View>
                 </View>
                 <View style={styles.accountContent}>
-                    <AccountCard />
+                <SectionList
+          sections={[
+            {title: 'D', data: ['Devin', 'Dan', 'Dominic']},
+            {title: 'J', data: ['Jackson', 'James', 'Jillian', 'Jimmy', 'Joel', 'John', 'Julie']},
+          ]}
+          renderItem={({item}) => <Text style={styles.item}>{item}</Text>}
+          renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
+          keyExtractor={(item, index) => index}
+        />
                 </View>
             </View>
         );
