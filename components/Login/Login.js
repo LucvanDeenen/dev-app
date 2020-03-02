@@ -7,9 +7,9 @@ import globalStyles from '../Main/styles.js';
 
 const Login = props => {
     return (
-        <View>
+        <View style={styles.container}>
             <TouchableOpacity
-                onPress={props.logout}>>
+                    onPress={props.log}>
                     <Icon reverse
                     name="ios-exit"
                     type='ionicon'

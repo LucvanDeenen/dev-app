@@ -48,7 +48,7 @@ const Notes = props => {
                             raised />
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={props.logout}>>
+                        onPress={props.logout}>
                         <Icon reverse
                             name="ios-exit"
                             type='ionicon'

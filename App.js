@@ -1,6 +1,6 @@
 // Functions
 import React, { useState } from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { View } from 'react-native';
 
 // Menu Screen
 import Menu from './components/Menu/Menu.js';
@@ -42,23 +42,22 @@ export default function App() {
     setMenu(!menu);
   }
 
+  const logFunc = () => {
+    setLogin(!login);
+  }
+
   if (login == true) {
     return (
       <View style={styles.app}>
-        <Login control={login} />
+        <Login control={login} log={logFunc} />
       </View>
     );
-  } 
-  
+  }
+
   if (login == false) {
     return (
-      // Full menu 
       <View style={styles.app}>
-        
-        {/* Menu Screen */}
         <Menu control={menu} select={chooseScreen} />
-
-        {/* Main Screen */}
         <View style={styles.containerApp}>
           <Notes control={screen} />
           <Home control={screen} />
@@ -66,10 +65,7 @@ export default function App() {
           <Videos control={screen} />
           <Colors control={screen} />
         </View>
-        
-        {/* Footer */}
-        <Footer switch={toggleMenu} control={menu} select={screen} logout={setLogin(!login)}/>
-
+        <Footer switch={toggleMenu} control={menu} select={screen} logout={logFunc} /> 
       </View>
     );
   }
