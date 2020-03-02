@@ -13,5 +13,5 @@
 - Open terminal (ctrl + ~)
 - type: npm install
 - Wait for the installation
-- To start type: npm start
+- To start, type: npm start
 - Enjoy & Done!
