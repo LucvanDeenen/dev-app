@@ -18,9 +18,9 @@ const Notes = props => {
                     shadowRadius: 1,
                 }} />
                 <View style={styles.appFooter}>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={props.switch}>
                         <Icon reverse
-                            onPress={props.switch}
                             name="ios-home"
                             type='ionicon'
                             color='#52AA5E'
@@ -47,7 +47,8 @@ const Notes = props => {
                             color='#52AA5E'
                             raised />
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={props.logout}>>
                         <Icon reverse
                             name="ios-exit"
                             type='ionicon'
@@ -70,9 +71,9 @@ const Notes = props => {
                     shadowRadius: 1,
                 }} />
                 <View style={styles.appFooter}>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={props.switch}>
                         <Icon reverse
-                            onPress={props.switch}
                             name="ios-arrow-back"
                             type='ionicon'
                             color='#52AA5E'

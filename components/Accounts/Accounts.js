@@ -5,14 +5,10 @@ import { Icon } from 'react-native-elements';
 import styles from './local-styles.js';
 import globalStyles from '../Main/styles.js';
 
-import AccountCard from './AccountCard.js';
-import AccountAdd from './AccountAdd.js';
-
 const accounts = props => {
     if (props.control == 'accounts') {
         return (
             <View style={styles.accountContainer}>
-                <AccountAdd control={props.addAccControl}/>
                 <View style={styles.accountHeader}>
                     <View style={styles.head}>
                         <View style={styles.leftHead}>
@@ -25,8 +21,7 @@ const accounts = props => {
                                 <Icon reverse
                                     name="ios-add"
                                     type='ionicon'
-                                    color='#52AA8A'
-                                    onPress={props.addAccountFunc} />
+                                    color='#52AA8A' />
                             </TouchableOpacity>
                         </View>
                     </View>

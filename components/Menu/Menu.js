@@ -13,9 +13,9 @@ const Menu = props => {
                     <View style={styles.menuTab}>
                         <View style={styles.menuRow}>
                             <View style={styles.menuBlock}>
-                                <TouchableOpacity style={styles.menuButton} >
+                                <TouchableOpacity style={styles.menuButton}
+                                    onPress={() => { props.select('home') }}>
                                     <Icon reverse
-                                        onPress={() => { props.select('home') }}
                                         name="ios-home"
                                         type='ionicon'
                                         color='#52AA5E'
@@ -24,9 +24,9 @@ const Menu = props => {
                                 <Text style={globalStyles.textStandard}> Home </Text>
                             </View>
                             <View style={styles.menuBlock}>
-                                <TouchableOpacity style={styles.menuButton}>
+                                <TouchableOpacity style={styles.menuButton}
+                                    onPress={() => { props.select('accounts') }}>
                                     <Icon reverse
-                                        onPress={() => { props.select('accounts') }}
                                         name='ios-key'
                                         type='ionicon'
                                         color='#52AA5E'
@@ -37,9 +37,9 @@ const Menu = props => {
                         </View>
                         <View style={styles.menuRow}>
                             <View style={styles.menuBlock}>
-                                <TouchableOpacity value='notes' style={styles.menuButton}>
+                                <TouchableOpacity value='notes' style={styles.menuButton}
+                                        onPress={() => { props.select('notes') }}>
                                     <Icon reverse
-                                        onPress={() => { props.select('notes') }}
                                         name='ios-create'
                                         type='ionicon'
                                         color='#52AA5E'
@@ -48,9 +48,9 @@ const Menu = props => {
                                 <Text style={globalStyles.textStandard}> Notes </Text>
                             </View>
                             <View style={styles.menuBlock}>
-                                <TouchableOpacity style={styles.menuButton}>
+                                <TouchableOpacity style={styles.menuButton}
+                                        onPress={() => { props.select('videos') }}>
                                     <Icon reverse
-                                        onPress={() => { props.select('videos') }}
                                         name='youtube'
                                         type='feather'
                                         color='#52AA5E'
@@ -61,9 +61,9 @@ const Menu = props => {
                         </View>
                         <View style={styles.menuRow}>
                             <View style={styles.menuBlock}>
-                                <TouchableOpacity style={styles.menuButton}>
+                                <TouchableOpacity style={styles.menuButton}
+                                        onPress={() => { props.select('colors') }}>
                                     <Icon reverse
-                                        onPress={() => { props.select('colors') }}
                                         name='ios-color-palette'
                                         type='ionicon'
                                         color='#52AA5E'
@@ -71,7 +71,7 @@ const Menu = props => {
                                 </TouchableOpacity>
                                 <Text style={globalStyles.textStandard}> Colors </Text>
                             </View>
-                            {/* <View style={styles.menuBlock}>
+                            <View style={styles.menuBlock}>
                                 <TouchableOpacity style={styles.menuButton}>
                                     <Icon reverse
                                         name='ios-camera'
@@ -80,7 +80,7 @@ const Menu = props => {
                                         raised />
                                 </TouchableOpacity>
                                 <Text style={globalStyles.textStandard}> Camera </Text>
-                            </View> */}
+                            </View>
                         </View>
                     </View>
                     <Text style={globalStyles.textStandard}> 1/1 </Text>

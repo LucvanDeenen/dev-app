@@ -7,15 +7,18 @@ import Menu from './components/Menu/Menu.js';
 
 // Notes Screen
 import Notes from './components/Notepad/Notes.js';
- 
+
 // Home Screen
 import Home from './components/Home/Home.js';
 
 // Colors Screen
-import Colors  from './components/ColorChanger/ColorRandom.js';
+import Colors from './components/ColorChanger/ColorRandom.js';
 
 // Account Screen
 import Accounts from './components/Accounts/Accounts.js';
+
+// Login Screen
+import Login from './components/Login/Login.js';
 
 // Video Screen
 import Videos from './components/Videos/Videos.js';
@@ -28,12 +31,7 @@ export default function App() {
   const [menu, setMenu] = useState(false);
   const [screen, setScreen] = useState('home');
 
-  const [addAccount, setAddAccount] = useState(false);
-
-  const addAccountFunc = () => {
-    setAddAccount(!addAccount);
-    console.log(addAccount);
-  }
+  const [login, setLogin] = useState(true);
 
   const toggleMenu = () => {
     setMenu(!menu);
@@ -44,21 +42,37 @@ export default function App() {
     setMenu(!menu);
   }
 
-  return (
-    <View style={styles.app}>
-      <Menu control={menu} select={chooseScreen} />
-
-      <View style={styles.containerApp}>
-        <Notes control={screen} />
-        <Home control={screen} />
-        <Accounts control={screen} addAcc={addAccountFunc} addAccControl={addAccount}/>
-        <Videos control={screen} />
-        <Colors control={screen}/>
+  if (login == true) {
+    return (
+      <View style={styles.app}>
+        <Login control={login} />
       </View>
+    );
+  } 
+  
+  if (login == false) {
+    return (
+      // Full menu 
+      <View style={styles.app}>
+        
+        {/* Menu Screen */}
+        <Menu control={menu} select={chooseScreen} />
 
-      <Footer switch={toggleMenu} control={menu} select={screen} />
-    </View>
-  );
+        {/* Main Screen */}
+        <View style={styles.containerApp}>
+          <Notes control={screen} />
+          <Home control={screen} />
+          <Accounts control={screen} />
+          <Videos control={screen} />
+          <Colors control={screen} />
+        </View>
+        
+        {/* Footer */}
+        <Footer switch={toggleMenu} control={menu} select={screen} logout={setLogin(!login)}/>
+
+      </View>
+    );
+  }
 }
 
 

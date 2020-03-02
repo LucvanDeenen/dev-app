@@ -6,6 +6,13 @@ export default StyleSheet.create({
         alignItems: 'center',
         flex: 1,
     },
+    slider: {
+        flex: 1,
+        marginLeft: 10,
+        marginRight: 10,
+        alignItems: "stretch",
+        justifyContent: "center"
+    },
     button: {
         maxHeight: 80,
         maxWidth: 80,
