@@ -11,6 +11,9 @@ import Notes from './components/Notepad/Notes.js';
 // Home Screen
 import Home from './components/Home/Home.js';
 
+// Colors Screen
+import Colors  from './components/ColorChanger/ColorRandom.js';
+
 // Account Screen
 import Accounts from './components/Accounts/Accounts.js';
 
@@ -50,6 +53,7 @@ export default function App() {
         <Home control={screen} />
         <Accounts control={screen} addAcc={addAccountFunc} addAccControl={addAccount}/>
         <Videos control={screen} />
+        <Colors control={screen}/>
       </View>
 
       <Footer switch={toggleMenu} control={menu} select={screen} />
