@@ -6,4 +6,11 @@ export default StyleSheet.create({
         alignItems: 'center',
         flex: 1,
     },
+    containerLogin: {
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        flexDirection: 'row',
+        width: '100%',
+        margin: 5,
+    }
 });
