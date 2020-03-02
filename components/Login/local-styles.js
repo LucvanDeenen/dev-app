@@ -7,10 +7,11 @@ export default StyleSheet.create({
         flex: 1,
     },
     containerLogin: {
-        justifyContent: 'space-evenly',
+        justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'row',
         width: '100%',
-        margin: 5,
+        padding: 10,
+        marginTop: 10,
     }
 });

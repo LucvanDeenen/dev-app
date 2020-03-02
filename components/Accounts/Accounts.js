@@ -1,11 +1,38 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, SectionList } from 'react-native';
-import { Icon } from 'react-native-elements';
+import { View, TouchableOpacity } from 'react-native';
+import { Icon, Text, ListItem } from 'react-native-elements';
 
 import styles from './local-styles.js';
 import globalStyles from '../Main/styles.js';
 
 const accounts = props => {
+    const list1 = [
+        {
+            name: 'Amy Farha',
+            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+            subtitle: 'Vice President'
+        },
+        {
+            name: 'Chris Jackson',
+            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+            subtitle: 'Vice Chairman'
+        },
+    ]
+    const list2 = [
+        {
+            category: 'League',
+            name: 'League Main',
+            login: 'Lucvd1',
+            password: 'Luc134679852'
+        },
+        {
+            category: 'Mail',
+            name: 'Spam Mail',
+            login: 'lucvdrs@outlook.com',
+            password: 'Luc134679852'
+        },
+    ]
+
     if (props.control == 'accounts') {
         return (
             <View style={styles.accountContainer}>
@@ -27,15 +54,33 @@ const accounts = props => {
                     </View>
                 </View>
                 <View style={styles.accountContent}>
-                    <SectionList
-                        sections={[
-                            { title: 'D', data: ['Devin', 'Dan', 'Dominic'] },
-                            { title: 'J', data: ['Jackson', 'James', 'Jillian', 'Jimmy', 'Joel', 'John', 'Julie'] },
-                        ]}
-                        renderItem={({ item }) => <Text style={styles.item}>{item}</Text>}
-                        renderSectionHeader={({ section }) => <Text style={styles.sectionHeader}>{section.title}</Text>}
-                        keyExtractor={(item, index) => index}
-                    />
+                    <View>
+                        {
+                            list1.map((l, i) => (
+                                <ListItem
+                                    key={i}
+                                    leftAvatar={{ source: { uri: l.avatar_url } }}
+                                    title={l.name}
+                                    subtitle={l.subtitle}
+                                    bottomDivider
+                                />
+                            ))
+                        }
+                    </View>
+                    <View>
+                        {
+                            list2.map((item, i) => (
+                                <TouchableOpacity>
+                                    <ListItem
+                                        key={i}
+                                        title={item.name}
+                                        bottomDivider
+                                        chevron
+                                    />
+                                </TouchableOpacity>
+                            ))
+                        }
+                    </View>
                 </View>
             </View>
         );

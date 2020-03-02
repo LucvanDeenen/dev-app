@@ -8,13 +8,15 @@ import globalStyles from '../Main/styles.js';
 const Login = props => {
     return (
         <View style={styles.container}>
+            <Text h2 style={globalStyles.textStandardDark}> Light </Text>
+            <Text h2 style={globalStyles.textStandardDark}> Watch </Text>
             <View style={styles.containerLogin}>
-                <Text>Username: </Text>
+                <Text style={globalStyles.textStandardDark}>Username: </Text>
                 <TextInput style={{ height: 30, width: '65%', borderColor: 'gray', borderWidth: 1, padding: 1, }}
-                    />
+                />
             </View>
             <View style={styles.containerLogin}>
-                <Text>Password: </Text>
+                <Text style={globalStyles.textStandardDark}>Password: </Text>
                 <TextInput style={{ height: 30, width: '65%', borderColor: 'gray', borderWidth: 1, padding: 1, }}
                     secureTextEntry={true}
                     password={true} />

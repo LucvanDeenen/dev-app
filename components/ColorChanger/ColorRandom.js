@@ -2,10 +2,13 @@ import React, { useState, Text } from 'react';
 import { View, TouchableOpacity } from 'react-native';
 import { Icon, Slider } from 'react-native-elements';
 
+import SwitchToggle from "react-native-switch-toggle";
+
 import styles from './local-styles.js';
 import globalStyles from '../Main/styles.js';
 
 const Color = props => {
+    const [toggle, setToggle] = useState(false);
     const [color, setColor] = useState({ backgroundColor: `rgba(${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 100)})` });
 
     const changeColor = () => {
@@ -23,6 +26,29 @@ const Color = props => {
                         color='#52AA5E'
                         raised />
                 </TouchableOpacity>
+                <SwitchToggle
+                    containerStyle={{
+                        marginTop: 16,
+                        width: 108,
+                        height: 48,
+                        borderRadius: 25,
+                        backgroundColor: "#ccc",
+                        padding: 5
+                    }}
+                    circleStyle={{
+                        width: 38,
+                        height: 38,
+                        borderRadius: 19,
+                        backgroundColor: "white"
+                    }}
+                    switchOn={toggle}
+                    onPress={() => {
+                        setToggle(!toggle);
+                    }}
+                    circleColorOff='#fff'
+                    circleColorOn='#52AA8A'
+                    duration={200}
+                />
             </View >
         );
     } else {
