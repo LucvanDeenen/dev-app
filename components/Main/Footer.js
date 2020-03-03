@@ -1,52 +1,62 @@
 import React, { useState } from 'react';
-import { View, ProgressViewIOSComponent } from 'react-native';
-import { Icon } from 'react-native-elements';
+import { View } from 'react-native';
+import { Icon, Text } from 'react-native-elements';
 
-import ActionButton from 'react-native-circular-action-menu';
+import ActionButton from 'react-native-action-button'
 
 import styles from './styles.js';
 
-const Notes = props => {
+const Footer = props => {
     const [collapse, setCollapse] = useState(false);
 
+    const menu = [
+        {
+            id: 1,
+            title: 'Apps',
+            event: props.switch,
+            nameIcon: 'ios-apps',
+            typeIcon: 'ionicon'
+        },
+        {
+            id: 2,
+            title: 'Settings',
+            event: null,
+            nameIcon: 'gear',
+            typeIcon: 'font-awesome'
+        },
+        {
+            id: 3,
+            title: 'Logout',
+            event: props.logout,
+            nameIcon: 'ios-exit',
+            typeIcon: 'ionicon'
+        },
+    ]
 
     if (!props.control) {
         return (
             <View style={styles.containerFooter}>
                 <ActionButton buttonColor="#52AA5E">
-                    <ActionButton.Item title="New Task" onPress={props.switch}>
-                        <Icon reverse
-                            name="ios-home"
-                            type='ionicon'
-                            color='#52AA5E'
-                            raised />
-                    </ActionButton.Item>
-                    <ActionButton.Item title="Notifications" onPress={() => { }}>
-                        <Icon reverse
-                            name="gear"
-                            type='font-awesome'
-                            color='#52AA5E'
-                            raised />
-                    </ActionButton.Item>
-                    <ActionButton.Item title="All Tasks" onPress={props.logout}>
-                        <Icon reverse
-                            name="ios-exit"
-                            type='ionicon'
-                            color='#52AA5E'
-                            raised />
-                    </ActionButton.Item>
+                    {
+                        menu.map((item, i) => (
+                            <ActionButton.Item title={item.title}
+                                onPress={item.event}>
+                                <Icon reverse
+                                    color='#52AA5E'
+                                    raised
+                                    name={item.nameIcon}
+                                    type={item.typeIcon} />
+                            </ActionButton.Item>
+                        ))
+                    }
                 </ActionButton>
             </View>
         );
     } else {
-        return (
-            <View style={styles.containerFooter}>
-                <ActionButton buttonColor="#52AA5E"
-                    onPress={props.switch} />
-            </View>
-        );
+        return null
     }
 }
-export default Notes;
+
+export default Footer;
 
 
