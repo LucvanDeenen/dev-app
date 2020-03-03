@@ -7,8 +7,6 @@ import ActionButton from 'react-native-action-button';
 import styles from './styles.js';
 
 const Footer = props => {
-    const [collapse, setCollapse] = useState(false);
-
     const menu = [
         {
             id: 1,
@@ -37,7 +35,8 @@ const Footer = props => {
         return (
             <View style={styles.containerFooter}>
                 <View style={styles.contentFooter}>
-                    <ActionButton buttonColor="#52AA5E">
+                    <ActionButton buttonColor="#52AA5E"
+                        offsetX={0}>
                         {
                             menu.map((item, i) => (
                                 <ActionButton.Item key={item.id} onPress={() => {

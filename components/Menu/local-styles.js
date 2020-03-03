@@ -4,11 +4,10 @@ export default StyleSheet.create({
     // Menu
     background: {
         flex: 1,
-        height: '100%',
-        width: '100%',
+        bottom: '15%',
+        right: '20%',
         zIndex: 2,
         position: 'absolute',
-        backgroundColor: 'rgba(0, 0, 0, 0.6)',
     },
     container: {
         justifyContent: 'center',
