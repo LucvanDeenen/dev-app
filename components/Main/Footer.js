@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View } from 'react-native';
 import { Icon, Text } from 'react-native-elements';
 
-import ActionButton from 'react-native-action-button'
+import ActionButton from 'react-native-action-button';
 
 import styles from './styles.js';
 
@@ -36,21 +36,22 @@ const Footer = props => {
     if (!props.control) {
         return (
             <View style={styles.containerFooter}>
-                <ActionButton
-                    buttonColor="#388659"
-                    hideShadow>
-                    {
-                        menu.map((item, i) => (
-                            <ActionButton.Item onPress={item.event}>
-                                <Icon reverse
-                                    color='#52AA5E'
-                                    raised
-                                    name={item.nameIcon}
-                                    type={item.typeIcon} />
-                            </ActionButton.Item>
-                        ))
-                    }
-                </ActionButton>
+                <View style={styles.contentFooter}>
+                    <ActionButton buttonColor="#52AA5E">
+                        {
+                            menu.map((item, i) => (
+                                <ActionButton.Item key={item.id} onPress={() => {
+                                    item.event()
+                                }}>
+                                    <Icon reverse
+                                        color='#52AA5E'
+                                        name={item.nameIcon}
+                                        type={item.typeIcon} />
+                                </ActionButton.Item>
+                            ))
+                        }
+                    </ActionButton>
+                </View>
             </View>
         );
     } else {

@@ -8,11 +8,13 @@ import globalStyles from '../Main/styles.js';
 const accounts = props => {
     const list1 = [
         {
+            id: '1',
             name: 'Amy Farha',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
             subtitle: 'Vice President'
         },
         {
+            id: '2',
             name: 'Chris Jackson',
             avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
             subtitle: 'Vice Chairman'
@@ -20,12 +22,14 @@ const accounts = props => {
     ]
     const list2 = [
         {
+            id: '1',
             category: 'League',
             name: 'League Main',
             login: 'Lucvd1',
             password: 'Luc134679852'
         },
         {
+            id: '2',
             category: 'Mail',
             name: 'Spam Mail',
             login: 'lucvdrs@outlook.com',
@@ -58,7 +62,7 @@ const accounts = props => {
                         {
                             list1.map((l, i) => (
                                 <ListItem
-                                    key={i}
+                                    key={l.id}
                                     leftAvatar={{ source: { uri: l.avatar_url } }}
                                     title={l.name}
                                     subtitle={l.subtitle}
@@ -70,9 +74,10 @@ const accounts = props => {
                     <View>
                         {
                             list2.map((item, i) => (
-                                <TouchableOpacity>
+                                <TouchableOpacity
+                                    key={item.id}>
                                     <ListItem
-                                        key={i}
+                                        key={item.id}
                                         title={item.name}
                                         bottomDivider
                                         chevron

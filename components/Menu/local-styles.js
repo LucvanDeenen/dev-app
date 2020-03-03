@@ -12,7 +12,6 @@ export default StyleSheet.create({
     },
     container: {
         justifyContent: 'center',
-        right: '15%',
         flex: 1,
     },
 });

@@ -6,6 +6,7 @@ export default StyleSheet.create({
         backgroundColor: '#ffff',
         justifyContent: 'center',
         height: '100%',
+        position: 'relative',
         flex: 1,
     },
     textStandardDark: {
@@ -36,14 +37,14 @@ export default StyleSheet.create({
 
     // Footer app
     containerFooter: {
+        flex: 1,
+        justifyContent: 'center',
+        height: '100%',
+        width: '100%',
         position: 'absolute',
-        zIndex: 2,
-        bottom: '15%',
-        right: '25%',
     },
-    footerButton: {
-        fontSize: 20,
-        height: 22,
-        color: 'white',
+    contentFooter: {
+        justifyContent: 'center',
+        flex: 1,
     },
 });
