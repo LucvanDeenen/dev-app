@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View } from 'react-native';
+import { View, ProgressViewIOSComponent } from 'react-native';
 import { Icon } from 'react-native-elements';
 
 import ActionButton from 'react-native-circular-action-menu';
@@ -23,10 +23,10 @@ const Notes = props => {
                     </ActionButton.Item>
                     <ActionButton.Item title="Notifications" onPress={() => { }}>
                         <Icon reverse
-                                name="gear"
-                                type='font-awesome'
-                                color='#52AA5E'
-                                raised />
+                            name="gear"
+                            type='font-awesome'
+                            color='#52AA5E'
+                            raised />
                     </ActionButton.Item>
                     <ActionButton.Item title="All Tasks" onPress={props.logout}>
                         <Icon reverse
@@ -39,7 +39,12 @@ const Notes = props => {
             </View>
         );
     } else {
-        return null
+        return (
+            <View style={styles.containerFooter}>
+                <ActionButton buttonColor="#52AA5E"
+                    onPress={props.switch} />
+            </View>
+        );
     }
 }
 export default Notes;
