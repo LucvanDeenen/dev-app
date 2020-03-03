@@ -20,7 +20,7 @@ const Footer = props => {
         {
             id: 2,
             title: 'Settings',
-            event: null,
+            event: props.settings,
             nameIcon: 'gear',
             typeIcon: 'font-awesome'
         },
@@ -36,11 +36,12 @@ const Footer = props => {
     if (!props.control) {
         return (
             <View style={styles.containerFooter}>
-                <ActionButton buttonColor="#52AA5E">
+                <ActionButton
+                    buttonColor="#388659"
+                    hideShadow>
                     {
                         menu.map((item, i) => (
-                            <ActionButton.Item title={item.title}
-                                onPress={item.event}>
+                            <ActionButton.Item onPress={item.event}>
                                 <Icon reverse
                                     color='#52AA5E'
                                     raised

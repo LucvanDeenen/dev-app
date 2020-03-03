@@ -65,7 +65,7 @@ export default function App() {
           <Videos control={screen} />
           <Colors control={screen} />
         </View>
-        <Footer switch={toggleMenu} control={menu} select={screen} logout={logFunc} /> 
+        <Footer switch={toggleMenu} control={menu} select={screen} logout={logFunc} settings={toggleMenu} /> 
       </View>
     );
   }

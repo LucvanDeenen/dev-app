@@ -12,22 +12,24 @@ const Menu = props => {
         return (
             <View style={styles.background}>
                 <View style={styles.container}>
-                    <ActionButton buttonColor="#52AA5E"
+                    <ActionButton buttonColor="#388659"
                         position="right"
+                        outRangeScale="0.93"
+                        btnOutRange="#388659"
                         onPress={props.close}
                         active="true"
                         autoInactive="false"
                         radius='250'>
-                        <ActionButton.Item buttonColor='#9b59b6' title="Notes" onPress={() => { props.select('notes') }}>
+                        <ActionButton.Item buttonColor='#3498db' title="Home" onPress={() => { props.select('home') }}>
                             <Icon reverse
-                                name='ios-create'
+                                name="ios-home"
                                 type='ionicon'
                                 color='#52AA5E'
                                 raised />
                         </ActionButton.Item>
-                        <ActionButton.Item buttonColor='#3498db' title="Home" onPress={() => { props.select('home') }}>
+                        <ActionButton.Item buttonColor='#9b59b6' title="Notes" onPress={() => { props.select('notes') }}>
                             <Icon reverse
-                                name="ios-home"
+                                name='ios-create'
                                 type='ionicon'
                                 color='#52AA5E'
                                 raised />
@@ -46,7 +48,7 @@ const Menu = props => {
                                 color='#52AA5E'
                                 raised />
                         </ActionButton.Item>
-                        <ActionButton.Item buttonColor='#1abc9c' title="Colors" onPress={() =>  props.select('colors') }>
+                        <ActionButton.Item buttonColor='#1abc9c' title="Colors" onPress={() => props.select('colors')}>
                             <Icon reverse
                                 name='ios-color-palette'
                                 type='ionicon'

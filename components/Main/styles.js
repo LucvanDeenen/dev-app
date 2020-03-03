@@ -36,10 +36,10 @@ export default StyleSheet.create({
 
     // Footer app
     containerFooter: {
+        position: 'absolute',
         zIndex: 2,
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '10%',
+        bottom: '15%',
+        right: '25%',
     },
     footerButton: {
         fontSize: 20,

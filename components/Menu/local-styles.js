@@ -12,7 +12,7 @@ export default StyleSheet.create({
     },
     container: {
         justifyContent: 'center',
-        margin: 10,
+        right: '15%',
         flex: 1,
     },
 });
