@@ -33,17 +33,11 @@ export default StyleSheet.create({
     containerApp: {
         flex: 1,
     },
-    
+
     // Footer app
-    appFooter: {
-        borderRadius: 40,
-        marginBottom: '1%',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-    },
     containerFooter: {
-        zIndex: 2,
-        backgroundColor: '#94C9A9',
+        position: 'absolute',
+        bottom: '5%',
+        alignSelf: 'center',
     },
 });

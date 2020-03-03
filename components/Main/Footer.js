@@ -1,87 +1,45 @@
-import React, { Component } from 'react';
-import { View, TouchableOpacity, Text } from 'react-native';
-import { Icon, Divider } from 'react-native-elements';
+import React, { useState } from 'react';
+import { View } from 'react-native';
+import { Icon } from 'react-native-elements';
+
+import ActionButton from 'react-native-circular-action-menu';
 
 import styles from './styles.js';
 
 const Notes = props => {
+    const [collapse, setCollapse] = useState(false);
+
+
     if (!props.control) {
         return (
             <View style={styles.containerFooter}>
-                <Divider style={{
-                    margin: 2,
-                    height: 2,
-                    backgroundColor: '#52AA8A',
-                    shadowColor: 'rgba(0,0,0, 0.2)',
-                    shadowOffset: { height: 1, width: 1 },
-                    shadowOpacity: 1,
-                    shadowRadius: 1,
-                }} />
-                <View style={styles.appFooter}>
-                    <TouchableOpacity
-                        onPress={props.switch}>
+                <ActionButton buttonColor="#52AA5E">
+                    <ActionButton.Item title="New Task" onPress={props.switch}>
                         <Icon reverse
                             name="ios-home"
                             type='ionicon'
                             color='#52AA5E'
                             raised />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
+                    </ActionButton.Item>
+                    <ActionButton.Item title="Notifications" onPress={() => { }}>
                         <Icon reverse
-                            name="gear"
-                            type='font-awesome'
-                            color='#52AA5E'
-                            raised />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Icon reverse
-                            name="comment"
-                            type='font-awesome'
-                            color='#52AA5E'
-                            raised />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Icon reverse
-                            name="ios-person"
-                            type='ionicon'
-                            color='#52AA5E'
-                            raised />
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={props.logout}>
+                                name="gear"
+                                type='font-awesome'
+                                color='#52AA5E'
+                                raised />
+                    </ActionButton.Item>
+                    <ActionButton.Item title="All Tasks" onPress={props.logout}>
                         <Icon reverse
                             name="ios-exit"
                             type='ionicon'
                             color='#52AA5E'
                             raised />
-                    </TouchableOpacity>
-                </View>
+                    </ActionButton.Item>
+                </ActionButton>
             </View>
         );
     } else {
-        return (
-            <View style={styles.containerFooter}>
-                <Divider style={{
-                    margin: 2,
-                    height: 2,
-                    backgroundColor: '#52AA8A',
-                    shadowColor: 'rgba(0,0,0, 0.2)',
-                    shadowOffset: { height: 1, width: 1 },
-                    shadowOpacity: 1,
-                    shadowRadius: 1,
-                }} />
-                <View style={styles.appFooter}>
-                    <TouchableOpacity
-                        onPress={props.switch}>
-                        <Icon reverse
-                            name="ios-arrow-back"
-                            type='ionicon'
-                            color='#52AA5E'
-                            raised />
-                    </TouchableOpacity>
-                </View>
-            </View>
-        );
+        return null
     }
 }
 export default Notes;
