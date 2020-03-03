@@ -1,6 +1,6 @@
-import React, { useState, Text } from 'react';
+import React, { useState } from 'react';
 import { View, TouchableOpacity } from 'react-native';
-import { Icon, Slider } from 'react-native-elements';
+import { Icon, Text } from 'react-native-elements';
 
 import SwitchToggle from "react-native-switch-toggle";
 
@@ -26,7 +26,8 @@ const Color = props => {
                         color='#52AA5E'
                         raised />
                 </TouchableOpacity>
-                <SwitchToggle
+                <Text style={globalStyles.textStandard}> Color: </Text>
+                {/* <SwitchToggle
                     containerStyle={{
                         marginTop: 16,
                         width: 108,
@@ -48,7 +49,7 @@ const Color = props => {
                     circleColorOff='#fff'
                     circleColorOn='#52AA8A'
                     duration={200}
-                />
+                /> */}
             </View >
         );
     } else {
