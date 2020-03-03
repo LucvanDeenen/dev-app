@@ -26,6 +26,7 @@
     "ios": {
       "supportsTablet": true
     },
-    "description": "Multi-functional purposes App"
+    "description": "Multi-functional purposes App",
+    "githubUrl": "https://github.com/Lucvd1/dev-app"
   }
 }
