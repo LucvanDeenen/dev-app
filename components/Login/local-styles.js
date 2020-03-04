@@ -6,12 +6,18 @@ export default StyleSheet.create({
         alignItems: 'center',
         flex: 1,
     },
-    containerLogin: {
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexDirection: 'row',
-        width: '100%',
-        padding: 10,
-        marginTop: 10,
-    }
+    head: {
+        margin: 35,
+    },
+    input: {
+        height: 30,
+        width: '65%',
+        borderColor: 'gray',
+        paddingHorizontal: 10,
+        borderBottomWidth: 0.5,
+        borderLeftWidth: 0.5,
+        borderBottomLeftRadius: 15,
+        padding: 1,
+        margin: 10,
+    },
 });

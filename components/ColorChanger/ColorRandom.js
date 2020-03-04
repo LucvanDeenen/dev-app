@@ -27,6 +27,7 @@ const Color = props => {
                         raised />
                 </TouchableOpacity>
                 <Text style={globalStyles.textStandard}> Color: </Text>
+                <Text style={[globalStyles.textStandard, { margin: 10 }]}>  { color.backgroundColor } </Text>
                 {/* <SwitchToggle
                     containerStyle={{
                         marginTop: 16,

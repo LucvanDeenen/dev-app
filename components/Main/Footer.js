@@ -26,7 +26,7 @@ const Footer = props => {
             id: 3,
             title: 'Logout',
             event: props.logout,
-            nameIcon: 'ios-exit',
+            nameIcon: 'ios-log-out',
             typeIcon: 'ionicon'
         },
     ]
