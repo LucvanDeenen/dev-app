@@ -41,7 +41,7 @@ export default StyleSheet.create({
     submit: {
         marginLeft: 2,
         marginTop: 2,
-        borderRadius: 10,
+        borderRadius: 20,
         backgroundColor: '#52AA8A',
         justifyContent: 'center',
         flex: 1,
