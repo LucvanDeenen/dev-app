@@ -15,6 +15,8 @@ export default function Notes(props) {
         { head: 'Game', content: 'Playing games', key: '3' },
     ])
 
+    const [item, setItem] = useState();
+
     const removeItem = (key) => {
         setItems((prevItems) => {
             return prevItems.filter(item => item.key != key)
@@ -32,6 +34,11 @@ export default function Notes(props) {
         })
     }
 
+    const openItem = (key) => {
+        setItem(items.find(key));
+        console.log(item);
+    }
+
     if (props.control == 'notes') {
         return (
             <View style={styles.mainScreen}>
@@ -41,7 +48,7 @@ export default function Notes(props) {
                     <FlatList
                         data={items}
                         renderItem={({ item }) => (
-                            <NoteItems item={item} removeItem={removeItem} />
+                            <NoteItems item={item} removeItem={removeItem} openItem={openItem}/>
                         )} />
                 </View>
             </View>

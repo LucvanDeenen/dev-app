@@ -5,9 +5,9 @@ import { Text, Icon } from 'react-native-elements';
 import styles from './local-styles.js';
 import globalStyles from '../Main/styles.js';
 
-export default function NoteItems({ item, removeItem }) {
+export default function NoteItems({ item, removeItem, openItem }) {
     return (
-        <TouchableOpacity style={styles.noteItem}>
+        <TouchableOpacity style={styles.noteItem} onPress={() => openItem(item.key)}>
             <View style={styles.noteItemText}>
                 <Text style={globalStyles.textStandardSideHead}> {item.head} </Text>
                 <Text style={globalStyles.textStandardSide}>  {item.content} </Text>
