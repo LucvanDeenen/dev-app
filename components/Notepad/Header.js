@@ -11,15 +11,9 @@ const Header = props => {
             <View style={styles.leftHead}>
             </View>
             <View style={styles.middleHead}>
-                <Text style={globalStyles.textStandard}>Notities</Text>
+                <Text style={globalStyles.textStandard}>Notes</Text>
             </View>
             <View style={styles.rightHead}>
-                <TouchableOpacity>
-                    <Icon reverse
-                        name="ios-add"
-                        type='ionicon'
-                        color='rgba(76,53,164,34)' />
-                </TouchableOpacity>
             </View>
         </View>
     )

@@ -8,7 +8,6 @@ export default StyleSheet.create({
     },
     contentText: {
         flex: 1,
-        marginHorizontal: 10,
     },
 
     // Item
@@ -16,13 +15,41 @@ export default StyleSheet.create({
         backgroundColor: '#52AA8E',
         padding: 16,
         marginTop: 16,
-        borderColor: '#bbb',
-        borderWidth: 1,
         borderRadius: 10,
+        marginHorizontal: 15,
         shadowColor: 'rgba(0,0,0, .4)',
-        shadowOffset: { height: 2, width: 2 },
+        shadowOffset: { height: 1, width: 1 },
         shadowOpacity: 1,
-        shadowRadius: 3,
+        shadowRadius: 2,
+    },
+    inputContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+    input: {
+        flex: 1,
+        paddingHorizontal: 5,
+        paddingVertical: 16,
+        marginLeft: 10,
+        marginRight: 10,
+        borderLeftWidth: 1,
+        borderBottomLeftRadius: 15,
+        borderBottomWidth: 1,
+        marginTop: 10,
+        borderColor: '#ddd',
+    },
+    submit: {
+        marginLeft: 2,
+        marginTop: 2,
+        borderRadius: 10,
+        backgroundColor: '#52AA8A',
+        justifyContent: 'center',
+        flex: 1,
+        maxWidth: '15%',
+        shadowColor: 'rgba(0,0,0, .4)',
+        shadowOffset: { height: 1, width: 1 },
+        shadowOpacity: 1,
+        shadowRadius: 2,
     },
 
     // Header
