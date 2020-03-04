@@ -8,7 +8,7 @@ export default StyleSheet.create({
     headerHome: {
         height: '4%',
         borderBottomWidth: 1,
-        borderColor: '#bbb',
+        borderColor: '#ddd',
         marginHorizontal: 5,
     },
     contentHome: {
