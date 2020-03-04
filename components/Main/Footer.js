@@ -37,7 +37,13 @@ export default function Footer(props) {
         return (
             <View style={styles.containerFooter}>
                 <View style={styles.contentFooter}>
-                    <ActionButton buttonColor='#bbb'
+                    <ActionButton buttonColor='#388659'
+                        renderIcon={() => (
+                            <Icon name='ios-menu'
+                                type='ionicon'
+                                color='#fff' />
+                        )}
+                        degrees={0}
                         offsetX={0}>
                         {
                             menu.map((item, i) => (

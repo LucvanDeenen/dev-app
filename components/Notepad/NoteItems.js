@@ -10,15 +10,23 @@ export default function NoteItems({ item, removeItem, openItem }) {
         <TouchableOpacity style={styles.noteItem} onPress={() => openItem(item.key)}>
             <View style={styles.noteItemText}>
                 <Text style={globalStyles.textStandardSideHead}> {item.head} </Text>
-                <Text style={globalStyles.textStandardSide}>  {item.content} </Text>
             </View>
-            <TouchableOpacity style={styles.noteItemClose} onPress={() => removeItem(item.key)}>
-                <Icon reverse
-                    size={20}
-                    name="ios-close"
-                    type='ionicon'
-                    color='rgba(76,53,164,34)' />
-            </TouchableOpacity>
+            <View style={{flexDirection: 'row'}}>
+                <TouchableOpacity style={styles.noteItemClose}>
+                    <Icon reverse
+                        size={20}
+                        name="ios-checkmark"
+                        type='ionicon'
+                        color='#388659' />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.noteItemClose} onPress={() => removeItem(item.key)}>
+                    <Icon reverse
+                        size={20}
+                        name="ios-close"
+                        type='ionicon'
+                        color='#388659' />
+                </TouchableOpacity>
+            </View>
         </TouchableOpacity>
     )
 }

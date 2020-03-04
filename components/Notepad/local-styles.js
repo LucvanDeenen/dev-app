@@ -33,21 +33,38 @@ export default StyleSheet.create({
     },
 
     // Inspect
-    inspectContainer: {
+    inspectBackground: {
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
         height: '100%',
+        backgroundColor: 'rgba(0,0,0, 0.5)',
         width: '100%',
         zIndex: 2,
         flex: 1,
     },
-    inspectContent: {
-        width: '70%',
+    inspectContainer: {
+        shadowColor: 'rgba(0,0,0, .4)',
+        shadowOffset: { height: 1, width: 1 },
+        shadowOpacity: 1,
+        shadowRadius: 2,
+        width: '90%',
+        height: '70%',
         backgroundColor: '#ddd',
-        height: '40%',
         borderRadius: 20,
         justifyContent: 'center'
+    },
+    inspectHeader: {
+        backgroundColor: '#52AA8A',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexDirection: 'row-reverse',
+        borderTopEndRadius: 20,
+        padding: 5,
+        flex: 1,
+    },
+    inspectContent: {
+        flex: 4,
     },
 
     // Input
@@ -67,11 +84,11 @@ export default StyleSheet.create({
         borderColor: '#ddd',
     },
     submit: {
-        borderRadius: 20,
+        flexDirection: 'row',
+        borderRadius: 5,
         backgroundColor: '#52AA8A',
         justifyContent: 'center',
         flex: 1,
-        maxWidth: '13%',
         shadowColor: 'rgba(0,0,0, .4)',
         shadowOffset: { height: 1, width: 1 },
         shadowOpacity: 1,
@@ -80,7 +97,7 @@ export default StyleSheet.create({
 
     // Header
     head: {
-        backgroundColor: '#bbb',
+        backgroundColor: '#52AA5E',
         paddingTop: 15,
         flexDirection: 'row',
         flex: 1,

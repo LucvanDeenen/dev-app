@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, FlatList } from 'react-native';
+import { Divider } from 'react-native-elements';
 
 import Header from './Header.js';
 import NoteItems from './NoteItems.js';
@@ -52,6 +53,7 @@ export default function Notes(props) {
                 <Header />
                 <View style={styles.contentText}>
                     <AddItem addItem={addItem} />
+                    <Divider style={{backgroundColor: '#ddd', height: 2 }}/>
                     <FlatList
                         data={items}
                         renderItem={({ item }) => (

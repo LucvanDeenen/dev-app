@@ -7,12 +7,42 @@ import ActionButton from 'react-native-action-button';
 import styles from './local-styles.js';
 import globalStyles from '../Main/styles.js';
 
-const Menu = props => {
+export default function Menu(props) {
+    const menu = [
+        {
+            id: 1,
+            title: 'Apps',
+            event: props.switch,
+            nameIcon: 'ios-apps',
+            typeIcon: 'ionicon'
+        },
+        {
+            id: 2,
+            title: 'Settings',
+            event: props.settings,
+            nameIcon: 'gear',
+            typeIcon: 'font-awesome'
+        },
+        {
+            id: 3,
+            title: 'Logout',
+            event: props.logout,
+            nameIcon: 'ios-log-out',
+            typeIcon: 'ionicon'
+        },
+    ]
+
     if (props.control) {
         return (
             <View style={styles.background}>
                 <View style={styles.container}>
-                    <ActionButton buttonColor='#bbb'
+                    <ActionButton buttonColor='#388659'
+                        renderIcon={() => (
+                            <Icon name='ios-menu'
+                                type='ionicon'
+                                color='#fff' />
+                        )}
+                        degrees={0}
                         offsetX={0}
                         onPress={props.close}
                         active={true}>
@@ -45,6 +75,4 @@ const Menu = props => {
     }
 
 }
-
-export default Menu
 
