@@ -6,14 +6,10 @@ export default StyleSheet.create({
         flex: 1,
     },
     headerHome: {
-        borderBottomEndRadius: 5,
-        borderBottomStartRadius: 5,
         height: '4%',
-        shadowColor: 'rgba(0,0,0, 0.2)',
-        shadowOffset: { height: 3, width: 3 },
-        shadowOpacity: 1,
-        shadowRadius: 1,
-        backgroundColor: '#52AA8A',
+        borderBottomWidth: 1,
+        borderColor: '#bbb',
+        marginHorizontal: 5,
     },
     contentHome: {
         flex: 1,

@@ -31,7 +31,7 @@ const Login = props => {
                     size={30}
                     name="ios-log-in"
                     type='ionicon'
-                    color='#52AA5E'
+                    color='#52AA8A'
                     raised />
             </TouchableOpacity>
         </View>

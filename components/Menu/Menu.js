@@ -12,7 +12,7 @@ const Menu = props => {
         return (
             <View style={styles.background}>
                 <View style={styles.container}>
-                    <ActionButton buttonColor="#52AA5E"
+                    <ActionButton buttonColor="#52AA8A"
                         offsetX={0}
                         onPress={props.close}
                         active={true}>
@@ -21,38 +21,20 @@ const Menu = props => {
                             <Icon reverse
                                 name="ios-home"
                                 type='ionicon'
-                                color='#52AA5E' />
+                                color='#52AA8A' />
                         </ActionButton.Item>
                         <ActionButton.Item onPress={() => { props.select('notes') }}>
                             <Icon reverse
                                 name='ios-create'
                                 type='ionicon'
-                                color='#52AA5E' />
+                                color='#52AA8A' />
                         </ActionButton.Item>
-                        {/* <ActionButton.Item onPress={() => { props.select('accounts') }}>
-                            <Icon reverse
-                                name='ios-key'
-                                type='ionicon'
-                                color='#52AA5E' />
-                        </ActionButton.Item> */}
-                        {/* <ActionButton.Item onPress={() => { props.select('videos') }}>
-                            <Icon reverse
-                                name='youtube'
-                                type='feather'
-                                color='#52AA5E' />
-                        </ActionButton.Item> */}
                         <ActionButton.Item onPress={() => props.select('colors')}>
                             <Icon reverse
                                 name='ios-color-palette'
                                 type='ionicon'
-                                color='#52AA5E' />
+                                color='#52AA8A' />
                         </ActionButton.Item>
-                        {/* <ActionButton.Item onPress={() => { props.select('home') }}>
-                            <Icon reverse
-                                name='ios-camera'
-                                type='ionicon'
-                                color='#52AA5E' />
-                        </ActionButton.Item> */}
                     </ActionButton>
                 </View>
             </View>

@@ -8,11 +8,26 @@ export default StyleSheet.create({
     },
     contentText: {
         flex: 1,
-        marginTop: 10,
         marginHorizontal: 10,
     },
+
+    // Item
+    noteItem: {
+        backgroundColor: '#52AA8E',
+        padding: 16,
+        marginTop: 16,
+        borderColor: '#bbb',
+        borderWidth: 1,
+        borderRadius: 10,
+        shadowColor: 'rgba(0,0,0, .4)',
+        shadowOffset: { height: 2, width: 2 },
+        shadowOpacity: 1,
+        shadowRadius: 3,
+    },
+
+    // Header
     head: {
-        backgroundColor: '#52AA8A',
+        backgroundColor: 'rgba(76,53,164,34)',
         paddingTop: 15,
         flexDirection: 'row',
         flex: 1,

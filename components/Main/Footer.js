@@ -35,7 +35,7 @@ const Footer = props => {
         return (
             <View style={styles.containerFooter}>
                 <View style={styles.contentFooter}>
-                    <ActionButton buttonColor="#52AA5E"
+                    <ActionButton buttonColor="#52AA8A"
                         offsetX={0}>
                         {
                             menu.map((item, i) => (
@@ -43,7 +43,7 @@ const Footer = props => {
                                     item.event()
                                 }}>
                                     <Icon reverse
-                                        color='#52AA5E'
+                                        color='#52AA8A'
                                         name={item.nameIcon}
                                         type={item.typeIcon} />
                                 </ActionButton.Item>
