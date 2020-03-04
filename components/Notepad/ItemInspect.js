@@ -8,8 +8,8 @@ import globalStyles from '../Main/styles.js';
 export default function ItemInspect({ item, closeItem }) {
     if (item != null) {
         return (
-            <View style={{ zIndex: 2, position: 'absolute', height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center', flex: 1, backgroundColor: '#bbb' }}>
-                <View style={{ width: '70%', backgroundColor: '#ddd', height: '60%', borderRadius: 20, justifyContent: 'center' }}>
+            <View style={styles.inspectContainer}>
+                <View style={styles.inspectContent}>
                     <TouchableOpacity style={styles.noteItemClose} onPress={closeItem}>
                         <Icon reverse
                             size={20}

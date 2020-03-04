@@ -25,7 +25,6 @@ export default function Notes(props) {
     }
 
     const closeItem = () => {
-        console.log('hello');
         setItem(null);
     }
 
@@ -49,9 +48,9 @@ export default function Notes(props) {
     if (props.control == 'notes') {
         return (
             <View style={styles.mainScreen}>
+                <ItemInspect item={item} closeItem={closeItem} />
                 <Header />
                 <View style={styles.contentText}>
-                    <ItemInspect item={item} closeItem={closeItem}/>
                     <AddItem addItem={addItem} />
                     <FlatList
                         data={items}
