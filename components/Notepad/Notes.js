@@ -10,9 +10,9 @@ import globalStyles from '../Main/styles.js';
 
 export default function Notes(props) {
     const [items, setItems] = useState([
-        { text: 'Buy coffee', key: '1' },
-        { text: 'Finish chores', key: '2' },
-        { text: 'Game', key: '3' },
+        { head: 'Buy coffee', content: 'Spending more money',  key: '1' },
+        { head: 'Finish chores', content: 'Do this that dut', key: '2' },
+        { head: 'Game', content: 'Playing games', key: '3' },
     ])
 
     const removeItem = (key) => {
@@ -23,9 +23,10 @@ export default function Notes(props) {
 
     const addItem = (text) => {
         setItems((prevItems) => {
-            let newKey = (prevItems.length + 1);
+            let newContent = 'temp';
+            let newKey = (text.charAt(0)+text.charAt(1)+newContent.charAt(0)+prevItems.length);
             return [
-                { text: text, key: newKey.toString() },
+                { head: text, content: newContent, key: newKey.toString() },
                 ...prevItems
             ]
         })

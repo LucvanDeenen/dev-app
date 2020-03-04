@@ -6,7 +6,7 @@ import ActionButton from 'react-native-action-button';
 
 import styles from './styles.js';
 
-const Footer = props => {
+export default function Footer(props) {
     const menu = [
         {
             id: 1,
@@ -31,6 +31,8 @@ const Footer = props => {
         },
     ]
 
+    const footerRef = React.createRef();
+
     if (!props.control) {
         return (
             <View style={styles.containerFooter}>
@@ -40,7 +42,7 @@ const Footer = props => {
                         {
                             menu.map((item, i) => (
                                 <ActionButton.Item key={item.id} onPress={() => {
-                                    item.event()
+                                    item.event();
                                 }}>
                                     <Icon reverse
                                         color='#52AA8A'
@@ -57,7 +59,5 @@ const Footer = props => {
         return null
     }
 }
-
-export default Footer;
 
 

@@ -5,7 +5,7 @@ import { Icon } from 'react-native-elements';
 import styles from './local-styles.js';
 import globalStyles from '../Main/styles.js';
 
-const Header = props => {
+export default function Header(props) {
     return (
         <View style={styles.head}>
             <View style={styles.leftHead}>
@@ -18,4 +18,3 @@ const Header = props => {
         </View>
     )
 }
-export default Header;

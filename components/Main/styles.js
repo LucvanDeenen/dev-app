@@ -31,6 +31,11 @@ export default StyleSheet.create({
         fontSize: 16,
         fontFamily: 'Arial Rounded MT Bold',
     },
+    textStandardSideHead: {
+        color: '#fff',
+        fontSize: 18,
+        fontFamily: 'Arial Rounded MT Bold',
+    },
     containerApp: {
         flex: 1,
     },

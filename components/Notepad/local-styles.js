@@ -10,10 +10,12 @@ export default StyleSheet.create({
         flex: 1,
     },
 
-    // Item
+    // Items
     noteItem: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         backgroundColor: '#52AA8E',
-        padding: 16,
+        padding: 12,
         marginTop: 16,
         borderRadius: 10,
         marginHorizontal: 15,
@@ -22,6 +24,18 @@ export default StyleSheet.create({
         shadowOpacity: 1,
         shadowRadius: 2,
     },
+    noteItemText: {
+
+    },
+    noteItemClose: {
+        borderRadius: 10,
+        shadowColor: 'rgba(0,0,0, .4)',
+        shadowOffset: { height: 1, width: 1 },
+        shadowOpacity: 1,
+        shadowRadius: 2,
+    },
+
+    // Input
     inputContainer: {
         flexDirection: 'row',
         justifyContent: 'center',
