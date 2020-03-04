@@ -15,10 +15,8 @@ export default StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         backgroundColor: '#52AA8E',
-        padding: 12,
         marginTop: 16,
         borderRadius: 10,
-        marginHorizontal: 15,
         shadowColor: 'rgba(0,0,0, .4)',
         shadowOffset: { height: 1, width: 1 },
         shadowOpacity: 1,
@@ -43,9 +41,6 @@ export default StyleSheet.create({
     input: {
         flex: 1,
         paddingHorizontal: 5,
-        paddingVertical: 16,
-        marginLeft: 10,
-        marginRight: 10,
         borderLeftWidth: 1,
         borderBottomLeftRadius: 15,
         borderBottomWidth: 1,
@@ -53,8 +48,6 @@ export default StyleSheet.create({
         borderColor: '#ddd',
     },
     submit: {
-        marginLeft: 2,
-        marginTop: 2,
         borderRadius: 20,
         backgroundColor: '#52AA8A',
         justifyContent: 'center',
@@ -68,7 +61,7 @@ export default StyleSheet.create({
 
     // Header
     head: {
-        backgroundColor: 'rgba(76,53,164,34)',
+        backgroundColor: '#bbb',
         paddingTop: 15,
         flexDirection: 'row',
         flex: 1,

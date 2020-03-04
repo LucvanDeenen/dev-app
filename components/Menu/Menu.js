@@ -12,7 +12,7 @@ const Menu = props => {
         return (
             <View style={styles.background}>
                 <View style={styles.container}>
-                    <ActionButton buttonColor='rgba(76,53,164,34)'
+                    <ActionButton buttonColor='#bbb'
                         offsetX={0}
                         onPress={props.close}
                         active={true}>

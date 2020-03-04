@@ -6,7 +6,7 @@ import styles from './local-styles.js';
 import globalStyles from '../Main/styles.js';
 
 export default function AddItem({ addItem }) {
-    const [text, setText] = useState('');
+    const [text, setText] = useState();
 
     const textInputRef = React.createRef();
 
@@ -26,6 +26,7 @@ export default function AddItem({ addItem }) {
                     textInputRef.current.clear();
                     if (text != null) {
                         addItem(text);
+                        setText(null);
                     }
                 }}>
                 <Icon size={30}

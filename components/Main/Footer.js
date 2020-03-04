@@ -37,7 +37,7 @@ export default function Footer(props) {
         return (
             <View style={styles.containerFooter}>
                 <View style={styles.contentFooter}>
-                    <ActionButton buttonColor='rgba(76,53,164,34)'
+                    <ActionButton buttonColor='#bbb'
                         offsetX={0}>
                         {
                             menu.map((item, i) => (

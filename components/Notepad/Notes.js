@@ -4,13 +4,14 @@ import { View, FlatList } from 'react-native';
 import Header from './Header.js';
 import NoteItems from './NoteItems.js';
 import AddItem from './AddItem.js';
+import ItemInspect from './ItemInspect.js';
 
 import styles from './local-styles.js';
 import globalStyles from '../Main/styles.js';
 
 export default function Notes(props) {
     const [items, setItems] = useState([
-        { head: 'Buy coffee', content: 'Spending more money',  key: '1' },
+        { head: 'Buy coffee', content: 'Spending more money', key: '1' },
         { head: 'Finish chores', content: 'Do this that dut', key: '2' },
         { head: 'Game', content: 'Playing games', key: '3' },
     ])
@@ -23,10 +24,15 @@ export default function Notes(props) {
         })
     }
 
+    const closeItem = () => {
+        console.log('hello');
+        setItem(null);
+    }
+
     const addItem = (text) => {
         setItems((prevItems) => {
             let newContent = 'temp';
-            let newKey = (text.charAt(0)+text.charAt(1)+newContent.charAt(0)+prevItems.length);
+            let newKey = (text.charAt(0) + text.charAt(1) + newContent.charAt(0) + prevItems.length);
             return [
                 { head: text, content: newContent, key: newKey.toString() },
                 ...prevItems
@@ -35,8 +41,9 @@ export default function Notes(props) {
     }
 
     const openItem = (key) => {
-        setItem(items.find(key));
-        console.log(item);
+        items.map(listItem => {
+            listItem.key == key ? setItem(listItem) : null
+        })
     }
 
     if (props.control == 'notes') {
@@ -44,11 +51,12 @@ export default function Notes(props) {
             <View style={styles.mainScreen}>
                 <Header />
                 <View style={styles.contentText}>
+                    <ItemInspect item={item} closeItem={closeItem}/>
                     <AddItem addItem={addItem} />
                     <FlatList
                         data={items}
                         renderItem={({ item }) => (
-                            <NoteItems item={item} removeItem={removeItem} openItem={openItem}/>
+                            <NoteItems item={item} removeItem={removeItem} openItem={openItem} />
                         )} />
                 </View>
             </View>
