@@ -6,7 +6,7 @@ import styles from './local-styles.js';
 import globalStyles from '../Main/styles.js';
 
 export default function AddItem({ addItem }) {
-    const [text, setText] = useState();
+    const [text, setText] = useState('');
 
     const textInputRef = React.createRef();
 
@@ -24,7 +24,9 @@ export default function AddItem({ addItem }) {
             <TouchableOpacity style={styles.submit}
                 onPress={() => {
                     textInputRef.current.clear();
-                    addItem(text);
+                    if (text != null) {
+                        addItem(text);
+                    }
                 }}>
                 <Icon size={30}
                     color="#fff"
