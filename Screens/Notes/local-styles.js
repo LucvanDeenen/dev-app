@@ -97,7 +97,7 @@ export default StyleSheet.create({
 
     // Header
     head: {
-        backgroundColor: '#52AA5E',
+        backgroundColor: '#52AA8A',
         paddingTop: 15,
         flexDirection: 'row',
         flex: 1,

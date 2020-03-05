@@ -44,7 +44,7 @@ export default function App() {
   if (login == false) {
     return (
       <View style={styles.app}>
-        <Menu control={menu} select={chooseScreen} close={toggleMenu}/>
+        <Menu control={menu} select={chooseScreen} close={toggleMenu} current={screen}/>
         <View style={styles.containerApp}>
           <Notes control={screen} />
           <Home control={screen} />

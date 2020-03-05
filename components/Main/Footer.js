@@ -44,14 +44,17 @@ export default function Footer(props) {
                                 color='#fff' />
                         )}
                         degrees={0}
-                        offsetX={0}>
+                        offsetX={0}
+                        ref={footerRef}>
                         {
                             menu.map((item, i) => (
-                                <ActionButton.Item key={item.id} onPress={() => {
-                                    item.event();
-                                }}>
-                                    <Icon reverse
-                                        color='#52AA8A'
+                                <ActionButton.Item key={item.id} onPress={() => { 
+                                    ref.reset();
+                                    item.event(); 
+                                }}
+                                    title={item.title}
+                                    spaceBetween={-40}>
+                                    <Icon color='#fff'
                                         name={item.nameIcon}
                                         type={item.typeIcon} />
                                 </ActionButton.Item>

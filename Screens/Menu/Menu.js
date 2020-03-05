@@ -8,29 +8,36 @@ import styles from './local-styles.js';
 import globalStyles from '../../components/Main/styles.js';
 
 export default function Menu(props) {
-    // const menu = [
-    //     {
-    //         id: 1,
-    //         title: 'Apps',
-    //         event: props.switch,
-    //         nameIcon: 'ios-apps',
-    //         typeIcon: 'ionicon'
-    //     },
-    //     {
-    //         id: 2,
-    //         title: 'Settings',
-    //         event: props.settings,
-    //         nameIcon: 'gear',
-    //         typeIcon: 'font-awesome'
-    //     },
-    //     {
-    //         id: 3,
-    //         title: 'Logout',
-    //         event: props.logout,
-    //         nameIcon: 'ios-log-out',
-    //         typeIcon: 'ionicon'
-    //     },
-    // ]
+    const menu = [
+        {
+            id: 1,
+            title: 'Home',
+            event: 'home',
+            nameIcon: 'ios-home',
+            typeIcon: 'ionicon'
+        },
+        {
+            id: 2,
+            title: 'Maps',
+            event: 'maps',
+            nameIcon: 'ios-map',
+            typeIcon: 'ionicon'
+        },
+        {
+            id: 3,
+            title: 'Notes',
+            event: 'notes',
+            nameIcon: 'ios-create',
+            typeIcon: 'ionicon'
+        },
+        {
+            id: 4,
+            title: 'Colors',
+            event: 'colors',
+            nameIcon: 'ios-color-palette',
+            typeIcon: 'ionicon'
+        },
+    ]
 
     if (props.control) {
         return (
@@ -46,32 +53,21 @@ export default function Menu(props) {
                         offsetX={0}
                         onPress={props.close}
                         active={true}>
-                        <ActionButton.Item onPress={() => { props.select('home') }}
-                            hideLabelShadow={true}>
-                            <Icon reverse
-                                name="ios-home"
-                                type='ionicon'
-                                color='#52AA8A' />
-                        </ActionButton.Item>
-                        <ActionButton.Item onPress={() => { props.select('maps') }}
-                            hideLabelShadow={true}>
-                            <Icon reverse
-                                name="ios-map"
-                                type='ionicon'
-                                color='#52AA8A' />
-                        </ActionButton.Item>
-                        <ActionButton.Item onPress={() => { props.select('notes') }}>
-                            <Icon reverse
-                                name='ios-create'
-                                type='ionicon'
-                                color='#52AA8A' />
-                        </ActionButton.Item>
-                        <ActionButton.Item onPress={() => props.select('colors')}>
-                            <Icon reverse
-                                name='ios-color-palette'
-                                type='ionicon'
-                                color='#52AA8A' />
-                        </ActionButton.Item>
+                        {
+                            menu.map(
+                                item => {
+                                    if (props.current != item.event) return (
+                                        <ActionButton.Item key={item.id} onPress={() => { props.select(item.event); }}
+                                            title={item.title}
+                                            spaceBetween={-40}>
+                                            <Icon color='#fff'
+                                                name={item.nameIcon}
+                                                type={item.typeIcon} />
+                                        </ActionButton.Item>
+                                    )
+                                }
+                            )
+                        }
                     </ActionButton>
                 </View>
             </View>
