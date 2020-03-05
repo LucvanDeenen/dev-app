@@ -2,29 +2,15 @@
 import React, { useState } from 'react';
 import { View } from 'react-native';
 
-// Menu Screen
-import Menu from './components/Menu/Menu.js';
-
-// Notes Screen
-import Notes from './components/Notepad/Notes.js';
-
-// Home Screen
-import Home from './components/Home/Home.js';
-
-// Colors Screen
-import Colors from './components/ColorChanger/ColorRandom.js';
-
-// Account Screen
-import Accounts from './components/Accounts/Accounts.js';
-
-// Login Screen
-import Login from './components/Login/Login.js';
-
-// Video Screen
-import Videos from './components/Videos/Videos.js';
-
-// Main objects
+// Components
+import Menu from './Screens/Menu/Menu.js';
+import Notes from './Screens/Notes/Notes.js';
+import Home from './Screens/Home/Home.js';
+import Colors from './Screens/ColorChanger/ColorRandom.js';
+import Login from './Screens/Login/Login.js';
 import Footer from './components/Main/Footer.js';
+
+// Styling
 import styles from './components/Main/styles.js';
 
 export default function App() {
@@ -61,8 +47,6 @@ export default function App() {
         <View style={styles.containerApp}>
           <Notes control={screen} />
           <Home control={screen} />
-          <Accounts control={screen} />
-          <Videos control={screen} />
           <Colors control={screen} />
         </View>
         <Footer switch={toggleMenu} control={menu} select={screen} logout={logFunc} settings={toggleMenu} /> 

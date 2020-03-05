@@ -4,7 +4,7 @@ import { Icon, Text } from 'react-native-elements';
 
 import SwitchToggle from "react-native-switch-toggle";
 
-import styles from './local-styles.js.js';
+import styles from './local-styles.js';
 import globalStyles from '../../components/Main/styles.js';
 
 const Color = props => {

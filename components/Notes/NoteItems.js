@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import { Text, Icon } from 'react-native-elements';
 
-import styles from './local-styles.js';
+import styles from '../../Screens/Notes/local-styles.js';
 import globalStyles from '../Main/styles.js';
 
 export default function NoteItems({ item, removeItem, openItem }) {

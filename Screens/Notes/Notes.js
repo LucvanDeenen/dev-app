@@ -3,14 +3,14 @@ import { View, FlatList } from 'react-native';
 import { Divider } from 'react-native-elements';
 
 // Components
-import Header from '../../components/Header.js';
-import NoteItems from '../../components/NoteItems.js';
+import Header from '../../components/Notes/Header.js';
+import NoteItems from '../../components/Notes/NoteItems.js';
 import AddItem from '../../components/Notes/AddItem.js';
 import ItemInspect from '../../components/Notes/ItemInspect.js';
 
 // Styling
 import styles from './local-styles.js';
-import globalStyles from '../Main/styles.js';
+import globalStyles from '../../components/Main/styles.js';
 
 export default function Notes(props) {
     const [items, setItems] = useState([

@@ -5,7 +5,7 @@ import { Icon } from 'react-native-elements';
 import ActionButton from 'react-native-action-button';
 
 import styles from './local-styles.js';
-import globalStyles from '../Main/styles.js';
+import globalStyles from '../../components/Main/styles.js';
 
 export default function Menu(props) {
     const menu = [
