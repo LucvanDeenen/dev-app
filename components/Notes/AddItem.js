@@ -28,7 +28,7 @@ export default function AddItem({ addItem }) {
                 //         setText(null);
                 //     }
                 // }}
-                onPress={console.log('dog')}>
+                >
                 <Icon size={30}
                     color="#fff"
                     name="ios-add"

@@ -31,8 +31,6 @@ export default function Footer(props) {
         },
     ]
 
-    const footerRef = React.createRef();
-
     if (!props.control) {
         return (
             <View style={styles.containerFooter}>
@@ -44,8 +42,7 @@ export default function Footer(props) {
                                 color='#fff' />
                         )}
                         degrees={0}
-                        offsetX={0}
-                        ref={footerRef}>
+                        offsetX={0}>
                         {
                             menu.map((item, i) => (
                                 <ActionButton.Item key={item.id} onPress={() => { 

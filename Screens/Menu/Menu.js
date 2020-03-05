@@ -37,6 +37,13 @@ export default function Menu(props) {
             nameIcon: 'ios-color-palette',
             typeIcon: 'ionicon'
         },
+        {
+            id: 5,
+            title: 'Tabs',
+            event: 'tabs',
+            nameIcon: 'ios-musical-note',
+            typeIcon: 'ionicon'
+        },
     ]
 
     if (props.control) {
