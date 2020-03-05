@@ -9,6 +9,7 @@ import Home from './Screens/Home/Home.js';
 import Colors from './Screens/ColorChanger/ColorRandom.js';
 import Login from './Screens/Login/Login.js';
 import Footer from './components/Main/Footer.js';
+import Maps from './Screens/Maps/Maps.js';
 
 // Styling
 import styles from './components/Main/styles.js';
@@ -48,6 +49,7 @@ export default function App() {
           <Notes control={screen} />
           <Home control={screen} />
           <Colors control={screen} />
+          <Maps control={screen}/>
         </View>
         <Footer switch={toggleMenu} control={menu} select={screen} logout={logFunc} settings={toggleMenu} /> 
       </View>

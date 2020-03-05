@@ -8,29 +8,29 @@ import styles from './local-styles.js';
 import globalStyles from '../../components/Main/styles.js';
 
 export default function Menu(props) {
-    const menu = [
-        {
-            id: 1,
-            title: 'Apps',
-            event: props.switch,
-            nameIcon: 'ios-apps',
-            typeIcon: 'ionicon'
-        },
-        {
-            id: 2,
-            title: 'Settings',
-            event: props.settings,
-            nameIcon: 'gear',
-            typeIcon: 'font-awesome'
-        },
-        {
-            id: 3,
-            title: 'Logout',
-            event: props.logout,
-            nameIcon: 'ios-log-out',
-            typeIcon: 'ionicon'
-        },
-    ]
+    // const menu = [
+    //     {
+    //         id: 1,
+    //         title: 'Apps',
+    //         event: props.switch,
+    //         nameIcon: 'ios-apps',
+    //         typeIcon: 'ionicon'
+    //     },
+    //     {
+    //         id: 2,
+    //         title: 'Settings',
+    //         event: props.settings,
+    //         nameIcon: 'gear',
+    //         typeIcon: 'font-awesome'
+    //     },
+    //     {
+    //         id: 3,
+    //         title: 'Logout',
+    //         event: props.logout,
+    //         nameIcon: 'ios-log-out',
+    //         typeIcon: 'ionicon'
+    //     },
+    // ]
 
     if (props.control) {
         return (
@@ -50,6 +50,13 @@ export default function Menu(props) {
                             hideLabelShadow={true}>
                             <Icon reverse
                                 name="ios-home"
+                                type='ionicon'
+                                color='#52AA8A' />
+                        </ActionButton.Item>
+                        <ActionButton.Item onPress={() => { props.select('maps') }}
+                            hideLabelShadow={true}>
+                            <Icon reverse
+                                name="ios-map"
                                 type='ionicon'
                                 color='#52AA8A' />
                         </ActionButton.Item>
