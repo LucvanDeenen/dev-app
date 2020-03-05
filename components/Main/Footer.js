@@ -49,7 +49,6 @@ export default function Footer(props) {
                         {
                             menu.map((item, i) => (
                                 <ActionButton.Item key={item.id} onPress={() => { 
-                                    ref.reset();
                                     item.event(); 
                                 }}
                                     title={item.title}

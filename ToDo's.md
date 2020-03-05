@@ -9,4 +9,4 @@
 - Add description text
 
 ## Navigation
-- Swap style footer and menu
+- Fix retract on menu
