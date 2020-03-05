@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { View, FlatList } from 'react-native';
 import { Divider } from 'react-native-elements';
 
-import Header from './Header.js';
-import NoteItems from './NoteItems.js';
-import AddItem from './AddItem.js';
-import ItemInspect from './ItemInspect.js';
+// Components
+import Header from '../../components/Header.js';
+import NoteItems from '../../components/NoteItems.js';
+import AddItem from '../../components/Notes/AddItem.js';
+import ItemInspect from '../../components/Notes/ItemInspect.js';
 
+// Styling
 import styles from './local-styles.js';
 import globalStyles from '../Main/styles.js';
 

@@ -3,7 +3,7 @@ import { View, TouchableOpacity, TextInput } from 'react-native';
 import { Icon, Text, Divider } from 'react-native-elements';
 
 import styles from './local-styles.js';
-import globalStyles from '../Main/styles.js';
+import globalStyles from '../../components/Main/styles.js';
 
 const Login = props => {
     return (

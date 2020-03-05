@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { View } from 'react-native';
 import { Text, Divider } from 'react-native-elements';
 
-import styles from './local-styles.js';
-import globalStyles from '../Main/styles.js';
+import styles from './local-styles.js.js';
+import globalStyles from '../../components/Main/styles.js';
 
 const Home = props => {
     if (props.control == 'home') {
