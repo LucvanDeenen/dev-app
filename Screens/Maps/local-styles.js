@@ -7,7 +7,7 @@ export default StyleSheet.create({
     content: {
         justifyContent: 'flex-end',
         alignItems: 'center',
-        flex: 10,
+        flex: 8,
     },
     map: {
         ...StyleSheet.absoluteFillObject,
@@ -23,8 +23,5 @@ export default StyleSheet.create({
         shadowOffset: { height: 1, width: 1 },
         shadowOpacity: 1,
         shadowRadius: 1,
-    },
-    menu: {
-        backgroundColor: '#388659',
     },
 });

@@ -9,7 +9,7 @@ import Home from './Screens/Home/Home.js';
 import Colors from './Screens/ColorChanger/ColorRandom.js';
 import Login from './Screens/Login/Login.js';
 import Footer from './components/Main/Footer.js';
-import Maps from './Screens/Maps/MapsFunction.js';
+import Maps from './Screens/Maps/Maps.js';
 import Tabs from './Screens/Tabs/Tabs.js';
 
 // Styling
