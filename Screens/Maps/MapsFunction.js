@@ -16,7 +16,7 @@ export default function Maps(props) {
         longitudeDelta: 0.0121,
     })
 
-    const markerHome = React.createRef();
+    // const markerHome = React.createRef();
 
     if (props.control == 'maps') {
         return (
