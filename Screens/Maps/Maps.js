@@ -1,5 +1,5 @@
-import React, { useState, Component, Text } from 'react';
-import { View } from 'react-native';
+import React, { useState, Component } from 'react';
+import { View, Text } from 'react-native';
 import MapView from 'react-native-maps';
 
 import Header from '../../components/Maps/Header.js';
@@ -71,15 +71,17 @@ export default class Maps extends Component {
                     <Header />
                     <View style={styles.content}>
                         <MapView
+                            
                             // provider={PROVIDER_GOOGLE}
-                            style={styles.map}
+                            // onRegionChange={this.onRegionChange.bind(this)}
+                            // onPress={this.onMapPress.bind(this)}style={styles.map}
+                            
                             region={this.region}
                             showsUserLocation={true}
                             followUserLocation={true}
                             mapType={"standard"}
-                            // onRegionChange={this.onRegionChange.bind(this)}
-                            // onPress={this.onMapPress.bind(this)}
                             showsCompass={true}>
+                            
                             {/* <MapView.Marker
                                 coordinate={{
                                     latitude: (this.state.lastLat + 0.00050) || -36.82339,
@@ -91,6 +93,7 @@ export default class Maps extends Component {
                                     </Text>
                                 </View>
                             </MapView.Marker> */}
+                        
                         </MapView>
                     </View >
                 </View>
