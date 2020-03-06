@@ -14,12 +14,6 @@ export default class Maps extends Component {
         latitudeDelta: 0.015,
         longitudeDelta: 0.0121,
     }
-    // const[reg, setReg] = useState({
-    //     latitude: 50.939180,
-    //     longitude: 5.944199,
-    //     latitudeDelta: 0.015,
-    //     longitudeDelta: 0.0121,
-    // })
 
     // state = {
     //     mapRegion: null,
