@@ -10,7 +10,7 @@ export default function Header(props) {
     return (
         <View style={styles.header}>
             <View style={{ flex: 1 }}>
-
+                <Text>{ props.coordinates.toString() }</Text>
             </View>
             <View style={{ flex: 1 }}>
                 <Text style={globalStyles.textStandard}>Maps</Text>

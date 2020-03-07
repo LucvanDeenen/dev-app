@@ -22,6 +22,7 @@ export default function Maps(props) {
     const [line, setLine] = useState([]);
     const [coordinates, setCoordinates] = useState([]);
 
+
     // Functions
     const toggleCreateLine = () => {
         setCreateLine(!createLine);
@@ -46,22 +47,30 @@ export default function Maps(props) {
 
     async function drawLine(e) {
         if (createLine) {
-            await setCoordinates([...coordinates,
-            {
-                latitude: e.nativeEvent.coordinate.latitude,
-                longitude: e.nativeEvent.coordinate.longitude,
-            }]);
-            
-            await console.log(coordinates);
-
-            if (coordinates.length == 2) {
-                await setLine([...line, 
+            if (coordinates == null) {
+                setCoordinates([
                     {
-                        key: (line.length + 1).toString(),
-                        coordinate: coordinates
+                        latitude: e.nativeEvent.coordinate.latitude,
+                        longitude: e.nativeEvent.coordinate.longitude,
                     }
                 ]);
-                await setCoordinates([]);
+            }
+            if (coordinates != null) {
+                setCoordinates([...coordinates,
+                {
+                    latitude: e.nativeEvent.coordinate.latitude,
+                    longitude: e.nativeEvent.coordinate.longitude,
+                }]);
+            }
+
+            if (coordinates.length == 2) {
+                setLine([...line,
+                {
+                    key: (line.length + 1).toString(),
+                    coordinate: coordinates
+                }
+                ]);
+                setCoordinates([]);
             }
         } else {
             return null;
@@ -72,17 +81,22 @@ export default function Maps(props) {
     if (props.control == 'maps') {
         return (
             <View style={styles.container}>
-                <Header toggle={toggleCreateLine} />
+                <Header toggle={toggleCreateLine} coordinates={coordinates} />
                 <View style={styles.content}>
                     <MapView
                         // provider={PROVIDER_GOOGLE}
-                        onDoublePress={placeMarker.bind(this)}
                         style={styles.map}
-                        region={reg}
+                        initialRegion={reg}
+
+                        zoomTapEnabled={false}
+                        showsCompass={true}
                         showsUserLocation={true}
                         followUserLocation={true}
+
                         mapType={"standard"}
-                        showsCompass={true}>
+
+                        onRegionChangeComplete={(e) => { setReg(e) }}
+                        onPress={placeMarker.bind(this)}>
                         {
                             markers.map(item => {
                                 return <Marker key={item.key}
