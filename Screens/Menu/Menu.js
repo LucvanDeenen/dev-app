@@ -39,9 +39,9 @@ export default function Menu(props) {
         },
         {
             id: 5,
-            title: 'Tabs',
-            event: 'tabs',
-            nameIcon: 'ios-musical-note',
+            title: 'Accounts',
+            event: 'accounts',
+            nameIcon: 'ios-key',
             typeIcon: 'ionicon'
         },
     ]

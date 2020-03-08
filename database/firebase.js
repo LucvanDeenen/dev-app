@@ -16,6 +16,7 @@ const firebaseConfig = {
 // All functions in here
 const Firebase = {
   // Objects in form of a class
+  // Notes
   addNote: (data) => {
     return firebase.firestore().collection('Notes').add(data);
   },
@@ -24,6 +25,11 @@ const Firebase = {
   },
   getNotes: () => {
     return firebase.firestore().collection('Notes').get();
+  },
+
+  // Accounts
+  getNames: () => {
+    return firebase.firestore().collection('Accounts').get();
   },
 }
 

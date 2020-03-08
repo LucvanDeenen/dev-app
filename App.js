@@ -10,10 +10,17 @@ import Colors from './Screens/ColorChanger/ColorRandom.js';
 import Login from './Screens/Login/Login.js';
 import Footer from './components/Main/Footer.js';
 import Maps from './Screens/Maps/Maps.js';
-import Tabs from './Screens/Tabs/Tabs.js';
+import Accounts from './Screens/Accounts/Accounts';
 
 // Styling
 import styles from './components/Main/styles.js';
+
+// Base64
+import {decode, encode} from 'base-64'
+
+if (!global.btoa) {  global.btoa = encode }
+
+if (!global.atob) { global.atob = decode }
 
 export default function App() {
   const [menu, setMenu] = useState(false);
@@ -45,15 +52,16 @@ export default function App() {
   if (login == false) {
     return (
       <View style={styles.app}>
-        <Menu control={menu} select={chooseScreen} close={toggleMenu} current={screen}/>
+        <Menu control={menu} select={chooseScreen} close={toggleMenu} current={screen} />
         <View style={styles.containerApp}>
           <Notes control={screen} />
           <Home control={screen} />
           <Colors control={screen} />
-          <Maps control={screen}/>
-          <Tabs control={screen}/>
+          <Maps control={screen} />
+          {/* <Tabs control={screen}/> */}
+          <Accounts control={screen} />
         </View>
-        <Footer switch={toggleMenu} control={menu} select={screen} logout={logFunc} settings={toggleMenu} /> 
+        <Footer switch={toggleMenu} control={menu} select={screen} logout={logFunc} settings={toggleMenu} />
       </View>
     );
   }
