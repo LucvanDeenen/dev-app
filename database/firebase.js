@@ -6,6 +6,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyDepRNE6RqmObMGVelXiFGRqSuLcw75V4U",
   authDomain: "light-watch.firebaseapp.com",
   databaseURL: "https://light-watch.firebaseio.com/",
+  storageBucket: "light-watch.appspot.com",
   projectId: 'light-watch',
   messagingSenderId: '497844650692'
 };
@@ -30,7 +31,7 @@ const Firebase = {
   // Accounts
   getNames: () => {
     return firebase.firestore().collection('Accounts').get();
-  },
+  }
 }
 
 export default Firebase;

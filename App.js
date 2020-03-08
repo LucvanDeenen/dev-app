@@ -16,9 +16,9 @@ import Accounts from './Screens/Accounts/Accounts';
 import styles from './components/Main/styles.js';
 
 // Base64
-import {decode, encode} from 'base-64'
+import { decode, encode } from 'base-64'
 
-if (!global.btoa) {  global.btoa = encode }
+if (!global.btoa) { global.btoa = encode }
 
 if (!global.atob) { global.atob = decode }
 

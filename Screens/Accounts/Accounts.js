@@ -8,8 +8,18 @@ import styles from './local-styles.js';
 import globalStyles from '../../components/Main/styles.js';
 
 export default function Accounts(props) {
+    const [name, setName] = useState();
+
     const setNames = () => {
-        console.log(Firebase.getNotes());
+        setName(Firebase.getNames())
+        console.log(name, 'setter');
+    }
+
+    async function getName() {
+        let response = await Firebase.getNames();
+        console.log(response);
+        let json = await response.json;
+        console.log(json, 'oi');
     }
 
     const [items, setItems] = useState([])
@@ -22,7 +32,7 @@ export default function Accounts(props) {
                         backgroundColor: 'red', flex: 1,
                     }
                 }
-                    onPress={setNames}>
+                    onPress={() => {getName()}}>
                 </TouchableOpacity>
                 {/* {
                     items.map(items => {
