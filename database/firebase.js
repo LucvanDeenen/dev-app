@@ -28,10 +28,17 @@ const Firebase = {
     return firebase.firestore().collection('Notes').get();
   },
 
-  // Accounts
-  getNames: () => {
+  getNames2: async () => {
     return firebase.firestore().collection('Accounts').get();
-  }
+  },
+
+  // Accounts
+  getNames: async () => {
+    const querySnapshot = await firebase.firestore().collectionGroup('Accounts').get()
+    querySnapshot.forEach(doc => {
+      console.log(doc.data());
+    });
+  },
 }
 
 export default Firebase;

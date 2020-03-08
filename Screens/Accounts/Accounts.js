@@ -16,10 +16,10 @@ export default function Accounts(props) {
     }
 
     async function getName() {
-        let response = await Firebase.getNames();
-        console.log(response);
-        let json = await response.json;
-        console.log(json, 'oi');
+        let response = await Firebase.getNames()
+        // let object = response.forEach(obj => {
+        //     console.log(obj);
+        // });
     }
 
     const [items, setItems] = useState([])
@@ -32,7 +32,7 @@ export default function Accounts(props) {
                         backgroundColor: 'red', flex: 1,
                     }
                 }
-                    onPress={() => {getName()}}>
+                    onPress={() => { getName() }}>
                 </TouchableOpacity>
                 {/* {
                     items.map(items => {
