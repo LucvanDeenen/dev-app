@@ -42,7 +42,7 @@ const Firebase = {
 
   // Setters
   addAccount: (data) => {
-    return firebase.firestore().collection('Notes').add(data);
+    return firebase.firestore().collection('Accounts').add(data);
   },
 }
 
