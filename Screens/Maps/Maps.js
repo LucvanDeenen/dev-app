@@ -28,8 +28,8 @@ export default function Maps(props) {
     const [line, setLine] = useState([]);
 
     // Colors
-    const [drawColor, setDrawColor] = useState('#388659');
-    const [placeColor, setPlaceColor] = useState('#388659');
+    const [drawColor, setDrawColor] = useState(props.colors.buttonColor);
+    const [placeColor, setPlaceColor] = useState(props.colors.buttonColor);
 
     // Functions
     const toggleCreateLine = () => {
@@ -81,13 +81,13 @@ export default function Maps(props) {
         }
 
         if (!createLine) {
-            setDrawColor('#388659');
+            setDrawColor(props.colors.buttonColor);
         } if (createLine) {
             setDrawColor('#11270B');
         }
 
         if (!createMarker) {
-            setPlaceColor('#388659')
+            setPlaceColor(props.colors.buttonColor)
         } if (createMarker) {
             setPlaceColor('#11270B')
         }
@@ -97,7 +97,7 @@ export default function Maps(props) {
     if (props.control == 'maps') {
         return (
             <View style={styles.container}>
-                <Header toggleLine={toggleCreateLine} toggleMarker={toggleCreateMarker} drawColor={drawColor} placeColor={placeColor} />
+                <Header toggleLine={toggleCreateLine} toggleMarker={toggleCreateMarker} drawColor={drawColor} placeColor={placeColor} colors={props.colors}/>
                 <View style={styles.content}>
                     <MapView
                         // provider={PROVIDER_GOOGLE}

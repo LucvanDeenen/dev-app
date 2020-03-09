@@ -2,22 +2,46 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     container: {
-        justifyContent: 'center',
-        alignItems: 'center',
         flex: 1,
     },
+
     head: {
-        margin: 35,
+        flex: 2,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
+    containerInput: {
+        justifyContent: 'center',
+        paddingHorizontal: 15,
+        marginTop: 10,
+        flex: 1,
+        shadowColor: 'rgba(0,0,0, .4)',
+        shadowOffset: { height: 3, width: 3 },
+        shadowOpacity: 2,
+        shadowRadius: 2,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    containerSubmit: {
+        flexDirection: 'row',
+        margin: 10,
+        paddingBottom: 25
+    },
+
     input: {
         height: 30,
-        width: '65%',
-        borderColor: 'gray',
+        width: '80%',
         paddingHorizontal: 10,
         borderBottomWidth: 0.5,
         borderLeftWidth: 0.5,
         borderBottomLeftRadius: 15,
-        padding: 1,
+        padding: 10,
         margin: 10,
+    },
+    context: {
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
     },
 });

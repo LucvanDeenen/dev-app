@@ -3,8 +3,6 @@ import { View, TouchableOpacity, Text } from 'react-native';
 
 import Firebase from '../../database/firebase.js';
 
-import AccountDetail from '../../components/Accounts/AccountDetails';
-
 // Styling
 import styles from './local-styles.js';
 import globalStyles from '../../components/Main/styles.js';
@@ -30,10 +28,6 @@ export default function Accounts(props) {
         Firebase.addAccount(json);
     }
 
-    // useEffect(() => {
-    //     getAccounts();
-    // })
-
     if (props.control == 'accounts') {
         return (
             <View style={{ flex: 1 }}>
@@ -57,11 +51,6 @@ export default function Accounts(props) {
                             </View>
                         })
                     }
-                    {/* <FlatList
-                        data={accounts}
-                        renderItem={({ account }) => (
-                            <NoteItems item={item} removeItem={removeItem} openItem={openItem} />
-                        )} /> */}
                 </View>
             </View>
         );

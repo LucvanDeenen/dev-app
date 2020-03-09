@@ -23,10 +23,10 @@ if (!global.atob) { global.atob = decode }
 
 export default function App() {
   const [colors, setColors] = useState({
-    menuColor: '#52AA8A',
-    backgroundColor: '#fff',
-    buttonColor: '#388659',
-    textColor: '#52AA8A',
+    itemColor: '#392061',
+    backgroundColor: '#1A1B25',
+    buttonColor: '#392061',
+    headTextColor: '#D5C7BC',
   })
 
   const [menu, setMenu] = useState(false);

@@ -35,7 +35,7 @@ export default function Footer(props) {
         return (
             <View style={styles.containerFooter}>
                 <View style={styles.contentFooter}>
-                    <ActionButton buttonColor='#388659'
+                    <ActionButton buttonColor={props.colors.buttonColor}
                         renderIcon={() => (
                             <Icon name='ios-menu'
                                 type='ionicon'
@@ -45,8 +45,8 @@ export default function Footer(props) {
                         offsetX={0}>
                         {
                             menu.map((item, i) => (
-                                <ActionButton.Item key={item.id} onPress={() => { 
-                                    item.event(); 
+                                <ActionButton.Item key={item.id} onPress={() => {
+                                    item.event();
                                 }}
                                     title={item.title}
                                     spaceBetween={-40}>

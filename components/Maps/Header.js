@@ -8,11 +8,11 @@ import { Icon } from 'react-native-elements';
 
 export default function Header(props) {
     return (
-        <View style={styles.header}>
+        <View style={[styles.header, { backgroundColor: props.colors.itemColor }]}>
             <View style={{ flex: 1 }}>
             </View>
             <View style={{ flex: 1 }}>
-                <Text style={globalStyles.textStandard}>Maps</Text>
+                <Text style={[globalStyles.textStandard, { color: props.colors.headTextColor }]}>Maps</Text>
             </View>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'flex-end', flexDirection: 'row' }}>
                 <TouchableOpacity onPress={props.toggleMarker}>
@@ -22,7 +22,7 @@ export default function Header(props) {
                         name='ios-pin'
                         type='ionicon' />
                 </TouchableOpacity>
-                
+
                 <TouchableOpacity onPress={props.toggleLine}>
                     <Icon reverse
                         raised

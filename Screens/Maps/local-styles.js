@@ -13,7 +13,6 @@ export default StyleSheet.create({
         ...StyleSheet.absoluteFillObject,
     },
     header: {
-        backgroundColor: '#52AA8A',
         paddingTop: 15,
         flexDirection: 'row',
         flex: 1,

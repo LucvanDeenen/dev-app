@@ -8,28 +8,16 @@ export default StyleSheet.create({
         flex: 1,
         zIndex: 1,
     },
-    textStandardDark: {
-        textAlign: 'center',
-        color: '#52AA8A',
-        fontSize: 16,
-        fontFamily: 'Arial Rounded MT Bold',
-    },
-    textStandardDarkSide: {
-        color: '#52AA8A',
-        fontSize: 16,
-        fontFamily: 'Arial Rounded MT Bold',
-    },
     textStandard: {
-        color: '#fff',
-        fontSize: 16,
         textAlign: 'center',
+        fontSize: 16,
         fontFamily: 'Arial Rounded MT Bold',
     },
     textStandardSide: {
-        color: '#fff',
         fontSize: 16,
         fontFamily: 'Arial Rounded MT Bold',
     },
+    
     textStandardSideHead: {
         color: '#fff',
         fontSize: 18,

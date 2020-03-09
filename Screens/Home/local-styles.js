@@ -6,15 +6,14 @@ export default StyleSheet.create({
         flex: 1,
     },
     headerHome: {
-        height: '4%',
+        flex: 1,
         borderBottomWidth: 1,
         borderColor: '#ddd',
-        marginHorizontal: 5,
+        justifyContent: 'flex-end',
+        paddingBottom: 12,
+        alignItems: 'center',
     },
     contentHome: {
-        flex: 1,
-        margin: 10,
-        justifyContent: 'center',
-        alignContent: 'center',
+        flex: 10,
     },
 });

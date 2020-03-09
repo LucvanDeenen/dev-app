@@ -26,6 +26,5 @@ export default StyleSheet.create({
         shadowOffset: { height: 1, width: 1 },
         shadowOpacity: 1,
         shadowRadius: 1,
-        backgroundColor: '#388659'
     },
 });

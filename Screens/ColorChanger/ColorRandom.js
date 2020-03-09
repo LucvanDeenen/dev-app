@@ -18,16 +18,16 @@ const Color = props => {
     if (props.control == 'colors') {
         return (
             <View style={[styles.backgroundContainer, color]} >
-                <TouchableOpacity style={styles.button}
+                <TouchableOpacity style={[styles.button, { backgroundColor: props.colors.buttonColor }]}
                     onPress={changeColor}>
                     <Icon reverse
                         name='ios-brush'
                         type='ionicon'
-                        color='#52AA5E'
+                        color={props.colors.itemColor}
                         raised />
                 </TouchableOpacity>
-                <Text style={globalStyles.textStandard}> Color: </Text>
-                <Text style={[globalStyles.textStandard, { margin: 10 }]}>  { color.backgroundColor } </Text>
+                <Text style={[globalStyles.textStandard, { color: props.colors.headTextColor }]}> Color: </Text>
+                <Text style={[globalStyles.textStandard, { margin: 10, color: props.colors.headTextColor }]}>  {color.backgroundColor} </Text>
                 {/* <SwitchToggle
                     containerStyle={{
                         marginTop: 16,

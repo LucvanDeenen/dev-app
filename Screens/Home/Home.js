@@ -9,11 +9,11 @@ const Home = props => {
     if (props.control == 'home') {
         return (
             <View style={styles.backgroundHome}>
-                <View style={styles.headerHome} />
+                <View style={[styles.headerHome, { borderColor: props.colors.itemColor, backgroundColor: props.colors.itemColor }]}>
+                    <Text style={[globalStyles.textStandard, { color: props.colors.headTextColor }]}> Light Watch • Home Page </Text>
+                </View>
                 <View style={styles.contentHome}>
-                    <Text h2 style={globalStyles.textStandardDark}> Light Watch </Text>
-                    <Divider style={{marginHorizontal: 40, margin: 5, height: 2,}}></Divider>
-                    <Text h3 style={globalStyles.textStandardDark}> Home Page </Text>
+
                 </View>
             </View>
         );

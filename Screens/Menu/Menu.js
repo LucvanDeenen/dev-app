@@ -25,20 +25,13 @@ export default function Menu(props) {
         },
         {
             id: 3,
-            title: 'Notes',
-            event: 'notes',
-            nameIcon: 'ios-create',
-            typeIcon: 'ionicon'
-        },
-        {
-            id: 4,
             title: 'Colors',
             event: 'colors',
             nameIcon: 'ios-color-palette',
             typeIcon: 'ionicon'
         },
         {
-            id: 5,
+            id: 4,
             title: 'Accounts',
             event: 'accounts',
             nameIcon: 'ios-key',
@@ -50,7 +43,7 @@ export default function Menu(props) {
         return (
             <View style={styles.background}>
                 <View style={styles.container}>
-                    <ActionButton buttonColor='#388659'
+                    <ActionButton buttonColor={props.colors.buttonColor}
                         renderIcon={() => (
                             <Icon name='ios-menu'
                                 type='ionicon'
