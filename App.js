@@ -23,6 +23,13 @@ if (!global.btoa) { global.btoa = encode }
 if (!global.atob) { global.atob = decode }
 
 export default function App() {
+  const [colors, setColors] = useState({
+    menuColor: '',
+    backgroundColor: '#fff',
+    buttonColor: '',
+    textColor: '#52AA8A',
+  })
+
   const [menu, setMenu] = useState(false);
   const [screen, setScreen] = useState('home');
 
@@ -43,17 +50,17 @@ export default function App() {
 
   if (login == true) {
     return (
-      <View style={styles.app}>
-        <Login control={login} log={logFunc} />
+      <View style={[styles.app, { backgroundColor: colors.backgroundColor }]}>
+        <Login control={login} log={logFunc} colors={colors} />
       </View>
     );
   }
 
   if (login == false) {
     return (
-      <View style={styles.app}>
+      <View style={[styles.app, { backgroundColor: colors.backgroundColor }]}>
         <Menu control={menu} select={chooseScreen} close={toggleMenu} current={screen} />
-        <View style={styles.containerApp}>
+        <View style={[styles.containerApp, { backgroundColor: colors.backgroundColor }]}>
           <Notes control={screen} />
           <Home control={screen} />
           <Colors control={screen} />

@@ -3,7 +3,6 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     // Globals
     app: {
-        backgroundColor: '#ffff',
         justifyContent: 'center',
         height: '100%',
         flex: 1,

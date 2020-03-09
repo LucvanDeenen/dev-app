@@ -7,7 +7,7 @@ import globalStyles from '../../components/Main/styles.js';
 
 const Login = props => {
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, { backgroundColor: props.colors.backgroundColor }]}>
 
             <View style={styles.head}>
                 <Text h2 style={globalStyles.textStandardDark}> Light </Text>
