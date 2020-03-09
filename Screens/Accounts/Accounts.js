@@ -14,8 +14,11 @@ export default function Accounts(props) {
         const snapshot = await Firebase.getAccounts();
         snapshot.forEach(item => {
             console.log(item.data());
-            console.log(accounts);
-            setAccounts([...accounts, item.data()]);
+            if (accounts == null) {
+                setAccounts([item.data()])
+            } else {
+                setAccounts(prevAccounts => [...prevAccounts, item.data()]);
+            }
         })
 
     }
@@ -24,36 +27,29 @@ export default function Accounts(props) {
         let json = {
             Name: 'NewName',
             Password: '123',
-            id: 1,
+            id: 2,
         }
         console.log(json);
         Firebase.addAccount(json);
     }
 
-    const [items, setItems] = useState([])
-
     if (props.control == 'accounts') {
         return (
             <View style={{ flex: 1 }}>
-                <TouchableOpacity style={{ backgroundColor: 'red', flex: 1 }}
+                <TouchableOpacity style={{ backgroundColor: 'red', flex: 1, alignItems: 'center', justifyContent: 'center' }}
                     onPress={() => { getAccounts() }}>
+                    <Text>Pull</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={{ backgroundColor: 'blue', flex: 1 }}
+                <TouchableOpacity style={{ backgroundColor: 'blue', flex: 1, alignItems: 'center', justifyContent: 'center' }}
                     onPress={() => { pushAccounts() }}>
+                    <Text>Push</Text>
                 </TouchableOpacity>
 
-                <View style={{ flex: 1 }}>
-                    {
-                        accounts.map(account => {
-                            return <View style={{ flex: 1 }}>
-                                <Text>
-                                    {account.Name}
-                                </Text>
-                            </View>
-                        })
-                    }
-                </View>
+                <TouchableOpacity style={{ backgroundColor: 'white', flex: 1, alignItems: 'center', justifyContent: 'center' }}
+                    onPress={() => { console.log(accounts) }}>
+                    <Text>List</Text>
+                </TouchableOpacity>
             </View>
         );
     } else {

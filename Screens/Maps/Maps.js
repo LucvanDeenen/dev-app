@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
 
 import MapView, { Marker, Polyline } from 'react-native-maps';
@@ -16,11 +16,10 @@ export default function Maps(props) {
         latitudeDelta: 0.015,
         longitudeDelta: 0.0121,
     })
-
+    const [coordinates, setCoordinates] = useState([]);
     const [createLine, setCreateLine] = useState(false);
     const [markers, setMarkers] = useState([]);
     const [line, setLine] = useState([]);
-    const [coordinates, setCoordinates] = useState([]);
 
 
     // Functions
@@ -45,37 +44,37 @@ export default function Maps(props) {
         }]);
     }
 
-    async function drawLine(e) {
+
+    const getMarkerLocation = (e) => {
         if (createLine) {
-            if (coordinates == null) {
-                setCoordinates([
-                    {
-                        latitude: e.nativeEvent.coordinate.latitude,
-                        longitude: e.nativeEvent.coordinate.longitude,
-                    }
-                ]);
-            }
-            if (coordinates != null) {
-                setCoordinates([...coordinates,
-                {
-                    latitude: e.nativeEvent.coordinate.latitude,
-                    longitude: e.nativeEvent.coordinate.longitude,
-                }]);
+            let markerCoordinates = {
+                latitude: e.nativeEvent.coordinate.latitude,
+                longitude: e.nativeEvent.coordinate.longitude
             }
 
-            if (coordinates.length == 2) {
-                setLine([...line,
-                {
-                    key: (line.length + 1).toString(),
-                    coordinate: coordinates
-                }
-                ]);
-                setCoordinates([]);
+            if (coordinates == null) {
+                setCoordinates([markerCoordinates]);
+            } if (coordinates != null) {
+                setCoordinates(prevCoordinates => [...prevCoordinates, markerCoordinates]);
             }
+
         } else {
             return null;
         }
     }
+
+    useEffect(() => {
+        console.log(coordinates);
+        if (coordinates.length == 2) {
+            let newLine = {
+                key: (line.length + 1).toString(),
+                coordinate: coordinates
+            }
+            setLine(prevLine => [...prevLine, newLine]);
+            let prevCoordinate = coordinates[1];
+            setCoordinates([prevCoordinate]);
+        }
+    });
 
     // View
     if (props.control == 'maps') {
@@ -104,7 +103,7 @@ export default function Maps(props) {
                                     description={item.description}
                                     pinColor='#388659'
                                     coordinate={item.coordinates}
-                                    onPress={drawLine.bind(this)}
+                                    onPress={getMarkerLocation}
                                     draggable={true} />
                             })
                         }
