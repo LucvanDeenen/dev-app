@@ -10,16 +10,16 @@ import globalStyles from '../../components/Main/styles.js';
 export default function Accounts(props) {
     const [name, setName] = useState();
 
-    const setNames = () => {
-        setName(Firebase.getNames())
-        console.log(name, 'setter');
+    const getAccounts = async () => {
+        const snapshot = await Firebase.getAccounts();
+        snapshot.forEach(item => {
+            console.log(item.data());
+        })
+        
     }
 
-    async function getName() {
-        let response = await Firebase.getNames()
-        // let object = response.forEach(obj => {
-        //     console.log(obj);
-        // });
+    const getAccountAsync = () => {
+        Firebase.getAccountAsync();
     }
 
     const [items, setItems] = useState([])
@@ -32,7 +32,7 @@ export default function Accounts(props) {
                         backgroundColor: 'red', flex: 1,
                     }
                 }
-                    onPress={() => { getName() }}>
+                    onPress={() => { getAccounts() }}>
                 </TouchableOpacity>
                 {/* {
                     items.map(items => {

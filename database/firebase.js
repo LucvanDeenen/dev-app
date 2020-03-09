@@ -28,16 +28,21 @@ const Firebase = {
     return firebase.firestore().collection('Notes').get();
   },
 
-  getNames2: async () => {
-    return firebase.firestore().collection('Accounts').get();
-  },
-
   // Accounts
-  getNames: async () => {
-    const querySnapshot = await firebase.firestore().collectionGroup('Accounts').get()
+  // Getters
+  getAccountsAsync: async () => {
+    const querySnapshot = await firebase.firestore().collection('Accounts').get()
     querySnapshot.forEach(doc => {
       console.log(doc.data());
     });
+  },
+  getAccounts: () => {
+    return firebase.firestore().collection('Accounts').get();
+  },
+
+  // Setters
+  addAccount: (data) => {
+    return firebase.firestore().collection('Notes').add(data);
   },
 }
 
