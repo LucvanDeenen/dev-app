@@ -10,20 +10,28 @@ export default function Header(props) {
     return (
         <View style={styles.header}>
             <View style={{ flex: 1 }}>
-                <Text>{ props.coordinates.toString() }</Text>
             </View>
             <View style={{ flex: 1 }}>
                 <Text style={globalStyles.textStandard}>Maps</Text>
             </View>
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'flex-end' }}>
-                <TouchableOpacity onPress={props.toggle}>
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'flex-end', flexDirection: 'row' }}>
+                <TouchableOpacity onPress={props.toggleMarker}>
                     <Icon reverse
                         raised
-                        color='#388659'
+                        color={props.placeColor}
+                        name='ios-pin'
+                        type='ionicon' />
+                </TouchableOpacity>
+                
+                <TouchableOpacity onPress={props.toggleLine}>
+                    <Icon reverse
+                        raised
+                        color={props.drawColor}
                         name='ios-brush'
                         type='ionicon' />
                 </TouchableOpacity>
             </View>
         </View>
     )
+
 }
