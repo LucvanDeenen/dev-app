@@ -8,6 +8,7 @@ import AddAccount from '../../components/Accounts/AddAccount.js';
 // Styling
 import styles from './local-styles.js';
 import globalStyles from '../../components/Main/styles.js';
+import { FlatList } from 'react-native-gesture-handler';
 
 export default Accounts = (props) => {
     const [accounts, setAccounts] = useState([]);
@@ -70,15 +71,13 @@ export default Accounts = (props) => {
                 <AddAccount toggleCreate={toggleCreate} toggleCreateAccount={toggleCreateAccount} colors={props.colors} newAccount={(acc) => { newAccount(acc) }} id={accounts.length} />
 
                 <View style={{ flex: 7 }}>
-                    {
-                        accounts.map(account => {
-                            return <View style={[styles.accountDetails, { backgroundColor: props.colors.itemColor }]}
-                                key={account.id}>
-                                <Text> {account.Name} </Text>
-                                <Text> {account.Password} </Text>
-                            </View>
-                        })
-                    }
+                    <FlatList data={accounts}
+                        keyExtractor={(item) => item.id.toString()}
+                        renderItem={( { item } ) =>
+                            <TouchableOpacity style={[styles.accountDetails, { backgroundColor: props.colors.itemColor }]}>
+                                <Text style={[globalStyles.textStandard, { color: props.colors.headTextColor }]}> Username: {item.Name} </Text>
+                                <Text style={[globalStyles.textStandard, { color: props.colors.headTextColor }]}> Password: {item.Password} </Text>
+                            </TouchableOpacity>} />
                 </View>
             </View>
         );

@@ -3,13 +3,16 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     accountDetails: {
         flex: 1,
-        borderWidth: 1,
         borderRadius: 10,
         margin: 10,
         padding: 10,
-        maxHeight: 60,
+        maxHeight: 80,
         justifyContent: 'flex-start',
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
+        shadowColor: 'rgba(0,0,0, .4)',
+        shadowOffset: { height: 3, width: 3 },
+        shadowOpacity: 1,
+        shadowRadius: 1,
     },
     header: {
         maxHeight: '13.5%',
