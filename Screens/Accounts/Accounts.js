@@ -24,7 +24,6 @@ export default function Accounts(props) {
                 setAccounts(prevAccounts => [...prevAccounts, item.data()]);
             }
         })
-
     }
 
     const toggleCreateAccount = () => {
@@ -35,6 +34,10 @@ export default function Accounts(props) {
         getAccounts();
         Firebase.addAccount(json);
     }
+
+    useEffect(() => {
+
+    }, [])
 
     if (props.control == 'accounts') {
         return (
