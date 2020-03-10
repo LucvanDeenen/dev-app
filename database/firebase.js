@@ -15,7 +15,7 @@ const firebaseConfig = {
 !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
 
 // All functions in here
-const Firebase = {
+export default Firebase = {
   // Objects in form of a class
   // Notes
   addNote: (data) => {
@@ -45,5 +45,3 @@ const Firebase = {
     return firebase.firestore().collection('Accounts').add(data);
   },
 }
-
-export default Firebase;

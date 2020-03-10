@@ -36,7 +36,7 @@ export default Accounts = (props) => {
     }
 
     useEffect(() => {
-
+        getAccounts();
     }, [])
 
     if (props.control == 'accounts') {
@@ -44,19 +44,12 @@ export default Accounts = (props) => {
             <View style={{ flex: 1 }}>
 
                 <View style={[styles.header, { backgroundColor: props.colors.itemColor }]}>
-
                     <View style={{ flex: 1, padding: 10 }}>
-                        <TouchableOpacity style={{ backgroundColor: 'red', flex: 1, alignItems: 'center', justifyContent: 'center' }}
-                            onPress={() => { getAccounts() }}>
-                            <Text>Pull</Text>
-                        </TouchableOpacity>
+
                     </View>
 
                     <View style={{ flex: 1, padding: 5 }}>
-                        {/* <TouchableOpacity style={{ backgroundColor: 'blue', flex: 1, alignItems: 'center', justifyContent: 'center' }}
-                            onPress={() => { pushAccounts() }}>
-                            <Text>Push</Text>
-                        </TouchableOpacity> */}
+
                     </View>
 
                     <View style={{ flex: 1, alignItems: 'flex-end', padding: 5 }}>
