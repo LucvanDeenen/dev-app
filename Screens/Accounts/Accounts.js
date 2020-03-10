@@ -9,7 +9,7 @@ import AddAccount from '../../components/Accounts/AddAccount.js';
 import styles from './local-styles.js';
 import globalStyles from '../../components/Main/styles.js';
 
-export default function Accounts(props) {
+export default Accounts = (props) => {
     const [accounts, setAccounts] = useState([]);
     const [toggleCreate, setToggleCreate] = useState(false);
 
