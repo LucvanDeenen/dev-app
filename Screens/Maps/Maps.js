@@ -83,13 +83,13 @@ export default function Maps(props) {
         if (!createLine) {
             setDrawColor(props.colors.buttonColor);
         } if (createLine) {
-            setDrawColor('#11270B');
+            setDrawColor('#1A1B25');
         }
 
         if (!createMarker) {
             setPlaceColor(props.colors.buttonColor)
         } if (createMarker) {
-            setPlaceColor('#11270B')
+            setPlaceColor('#1A1B25')
         }
     });
 

@@ -10,10 +10,8 @@ const Login = props => {
         <View style={[styles.container, { backgroundColor: props.colors.backgroundColor }]}>
 
             <View style={styles.head}>
-                <Image
-                    style={{ width: 200, height: 400 }}
-                    source={require('../../assets/dark-mode-icon-cutout.png')}
-                />
+                <Image style={{ width: 200, height: 400 }}
+                    source={require('../../assets/dark-mode-icon-cutout.png')} />
             </View>
 
             <View style={styles.containerInput}>

@@ -30,15 +30,15 @@ export default StyleSheet.create({
     },
 
     input: {
-        height: 30,
+        borderWidth: 2,
         width: '80%',
-        paddingHorizontal: 10,
         borderBottomWidth: 0.5,
         borderLeftWidth: 0.5,
         borderBottomLeftRadius: 15,
         padding: 10,
         margin: 10,
     },
+    
     context: {
         flexDirection: 'row',
         justifyContent: 'flex-end',

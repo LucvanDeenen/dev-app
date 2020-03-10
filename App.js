@@ -23,9 +23,9 @@ if (!global.atob) { global.atob = decode }
 
 export default function App() {
   const [colors, setColors] = useState({
-    itemColor: '#392061',
+    itemColor: '#890D6A',
     backgroundColor: '#1A1B25',
-    buttonColor: '#392061',
+    buttonColor: '#7A0C5E',
     headTextColor: '#D5C7BC',
   })
 
