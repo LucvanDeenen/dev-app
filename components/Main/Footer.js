@@ -22,13 +22,13 @@ export default function Footer(props) {
             nameIcon: 'gear',
             typeIcon: 'font-awesome'
         },
-        {
-            id: 3,
-            title: 'Logout',
-            event: props.logout,
-            nameIcon: 'ios-log-out',
-            typeIcon: 'ionicon'
-        },
+        // {
+        //     id: 3,
+        //     title: 'Logout',
+        //     event: props.logout,
+        //     nameIcon: 'ios-log-out',
+        //     typeIcon: 'ionicon'
+        // },
     ]
 
     if (!props.control) {
