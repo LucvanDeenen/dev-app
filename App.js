@@ -47,17 +47,17 @@ export default function App() {
     setLogin(!login);
   }
 
-  if (login == true) {
-    return (
-      <View style={[styles.app, { backgroundColor: colors.backgroundColor }]}>
-        <Login control={login}
-          log={logFunc}
-          colors={colors} />
-      </View>
-    );
-  }
+  // if (login == true) {
+  //   return (
+  //     <View style={[styles.app, { backgroundColor: colors.backgroundColor }]}>
+  //       <Login control={login}
+  //         log={logFunc}
+  //         colors={colors} />
+  //     </View>
+  //   );
+  // }
 
-  if (login == false) {
+  // if (login == false) {
     return (
       <View style={[styles.app, { backgroundColor: colors.backgroundColor }]}>
 
@@ -92,7 +92,7 @@ export default function App() {
 
       </View>
     );
-  }
+  // }
 }
 
 

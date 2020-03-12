@@ -25,11 +25,14 @@ export default function Maps(props) {
 
     // Objects
     const [markers, setMarkers] = useState([]);
+    const [marker, setMarker] = useState();
     const [line, setLine] = useState([]);
 
     // Colors
     const [drawColor, setDrawColor] = useState(props.colors.buttonColor);
     const [placeColor, setPlaceColor] = useState(props.colors.buttonColor);
+
+    const [count, setCount] = useState(0)
 
     // Functions
     const toggleCreateLine = () => {
@@ -69,6 +72,22 @@ export default function Maps(props) {
         }
     }
 
+    const selectMarker = () => {
+
+    }
+
+    const userChangeHandler = (location) => {
+        setCount(count + 1)
+        if (count % 50 == 0) {
+            let ax = location.nativeEvent.coordinate.longitude;
+            let ay = location.nativeEvent.coordinate.latitude;
+            let bx = e.longitude;
+            let by = e.latitude;
+            let dist = Math.sqrt(Math.pow(ax - bx, 2) + Math.pow(ay - by, 2));
+            console.log(dist)
+        }
+    }
+
     useEffect(() => {
         if (coordinates.length == 2) {
             let newLine = {
@@ -97,10 +116,10 @@ export default function Maps(props) {
     if (props.control == 'maps') {
         return (
             <View style={styles.container}>
-                <Header toggleLine={toggleCreateLine} toggleMarker={toggleCreateMarker} drawColor={drawColor} placeColor={placeColor} colors={props.colors}/>
+                <Header toggleLine={toggleCreateLine} toggleMarker={toggleCreateMarker} drawColor={drawColor} placeColor={placeColor} colors={props.colors} />
                 <View style={styles.content}>
                     <MapView
-                        // provider={PROVIDER_GOOGLE}
+                        provider={'google'}
                         style={styles.map}
                         initialRegion={reg}
 
@@ -111,11 +130,15 @@ export default function Maps(props) {
 
                         mapType={"standard"}
 
+                        onUserLocationChange={(e) => {
+                            userChangeHandler(e) 
+                        }}
                         onRegionChangeComplete={(e) => { setReg(e) }}
                         onPress={eventHandler.bind(this)}>
                         {
                             markers.map(item => {
                                 return <Marker key={item.key}
+                                    onPress={(e) => selectMarker}
                                     title={item.title}
                                     description={item.description}
                                     pinColor='#388659'
@@ -123,6 +146,13 @@ export default function Maps(props) {
                                     draggable={true} />
                             })
                         }
+                        {/* <Marker
+                            coordinate={{
+                                latitude: 50.88281912,
+                                longitude: 5.97338621,
+                            }}
+                            pinColor='#388659'
+                        /> */}
                         {
                             line.map(item => {
                                 return <Polyline key={item.key}

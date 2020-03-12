@@ -18,7 +18,6 @@ export default Accounts = (props) => {
         setAccounts([]);
         const snapshot = await Firebase.getAccounts();
         snapshot.forEach(item => {
-            console.log(item.data());
             if (accounts == null) {
                 setAccounts([item.data()])
             } else {
